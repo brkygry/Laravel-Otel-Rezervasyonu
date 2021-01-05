@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="" />
+    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="Website template uyarlaması" />
+    <list id="1dd81cb0-845e-406e-9c61-eed8e46508da" name="Website template uyarlaması" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -17,6 +21,9 @@
         <option value="composer.json" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -142,17 +149,21 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1lEz61zdG5TqVz29tBihB1r5SFE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -165,15 +176,50 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="" />
+      <changelist id="1dd81cb0-845e-406e-9c61-eed8e46508da" name="Website template uyarlaması" comment="" />
       <created>1607176860522</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607176860522</updated>
-      <workItem from="1607176863235" duration="1081000" />
+      <workItem from="1607176863235" duration="1555000" />
+      <workItem from="1609176127493" duration="2338000" />
+      <workItem from="1609786877373" duration="41000" />
+      <workItem from="1609786962910" duration="1345000" />
+      <workItem from="1609791580600" duration="8791000" />
+      <workItem from="1609872506733" duration="9987000" />
+      <workItem from="1609883102729" duration="92000" />
     </task>
+    <task id="LOCAL-00001" summary="Website template uyarlaması">
+      <created>1609882423158</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609882423158</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Website template uyarlaması" />
+    <option name="LAST_COMMIT_MESSAGE" value="Website template uyarlaması" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
