@@ -1,10 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="Website template uyarlandı">
+    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="Admin Panel Template Uyarlandı">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/test.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/css/style-starter.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/Preloader_11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/avatar1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/avatar2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/avatar3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/avatar4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/avatar5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/avatar6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/avatar7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/cart.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/content.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/dashboard.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/desk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/people1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/people2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/people3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/people4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/profileimg-big.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/profileimg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/sort_asc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/sort_both.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/sort_desc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/team.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/team2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/team3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/team4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/template1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/images/template2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/js/Chart.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/js/bar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/js/jquery-1.10.2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/js/jquery-3.3.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/js/jquery.nicescroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/js/linechart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/js/modernizr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/js/scripts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/assets/js/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/blocks.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/cards.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/carousels.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/forms.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/people.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/pricing.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/collective-admin-panel-starter/starter/starter-license-W3Layouts.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <list id="1dd81cb0-845e-406e-9c61-eed8e46508da" name="Website template uyarlaması" comment="" />
@@ -160,6 +217,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mariadb&#10;mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -192,7 +250,7 @@
       <workItem from="1609872506733" duration="9987000" />
       <workItem from="1609883102729" duration="1815000" />
       <workItem from="1609885771217" duration="2261000" />
-      <workItem from="1609951452736" duration="3452000" />
+      <workItem from="1609951452736" duration="18630000" />
     </task>
     <task id="LOCAL-00001" summary="Website template uyarlaması">
       <created>1609882423158</created>
@@ -208,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609883473687</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Admin Panel Template Uyarlandı">
+      <created>1609955279331</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609955279331</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +294,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Website template uyarlaması" />
     <MESSAGE value="Website template uyarlandı" />
-    <option name="LAST_COMMIT_MESSAGE" value="Website template uyarlandı" />
+    <MESSAGE value="Admin Panel Template Uyarlandı" />
+    <option name="LAST_COMMIT_MESSAGE" value="Admin Panel Template Uyarlandı" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
