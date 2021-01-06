@@ -89,22 +89,6 @@
 <!-- END fh5co-page -->
 
 </div>
-<!-- END fh5co-wrapper -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- Javascripts -->
 <script src="{{asset('assets')}}/js/jquery-2.1.4.min.js"></script>
