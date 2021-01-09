@@ -110,7 +110,7 @@
                             </a>
                             <ul class="dropdown-menu drp-mnu" aria-labelledby="dropdownMenu3">
                                 <li class="user-info">
-                                    <h5 class="user-name">John Deo</h5>
+                                    <h5 class="user-name">Yigit Berkay Giray</h5>
                                     <span class="status ml-2">Available</span>
                                 </li>
                                 <li> <a href="#"><i class="lnr lnr-user"></i>My Profile</a> </li>

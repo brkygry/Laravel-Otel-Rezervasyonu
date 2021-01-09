@@ -16,6 +16,7 @@
 
     @yield('css')
     @yield('js')
+    @yield('footer')
 </head>
 
 <body class="sidebar-menu-collapsed">
