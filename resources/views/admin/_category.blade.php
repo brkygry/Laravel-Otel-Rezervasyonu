@@ -31,8 +31,13 @@
                     <div class="card-header">
                         <h3 class="card-title">Category List</h3>
                     </div>
+
                     <!-- /.card-header -->
                     <div class="card-body">
+                        <button href="{{route('admin_category_add')}}"  type="button" class="btn btn-primary btn-style mt-4">Add Category</button>
+                        <br>
+                        <br>
+
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
                             <tr>
@@ -52,10 +57,10 @@
                                 <td>{{ $rs -> title }}</td>
                                 <td>{{ $rs -> status }}</td>
                                 <td>Edit</td>
-                                <td>Delete</td>
+                                <td><a href="{{route('admin_category_delete', ['id'=> $rs->id])}}" onclick="return confirm('Are you sure? You want to delete this record')">Delete</a></td>
                             </tr>
                             @endforeach
-                        </table>
+                         </table>
                     </div>
                     <!-- /.card-body -->
                 </div>
