@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Category Edit Page')
+@section('title', 'Hotel Edit Page')
 
 @section('body')
     <div class="main-content">
@@ -9,12 +9,12 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h3>Edit Category</h3>
+                            <h3>Edit Hotel</h3>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Edit Category</li>
+                                <li class="breadcrumb-item active">Edit Hotel</li>
                             </ol>
                         </div>
                     </div>
@@ -24,23 +24,22 @@
             <section class="content">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Edit Category</h3>
+                        <h3 class="card-title">Edit Hotel</h3>
                     </div>
                         <!-- /.card-header -->
                     <div class="card-body">
                         <!-- forms 2 -->
                         <div class="card card_border py-2 mb-4">
                             <div class="card-body">
-                                <form action="{{route('admin_category_update', ['id'=>$data->id])}}" method="post">
+                                <form action="{{route('admin_hotel_update', ['id'=>$data->id])}}" method="post">
                                     @csrf
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="inputEmail4" class="input__label">Parent</label>
+                                            <label for="inputEmail4" class="input__label">Category</label>
                                             <select id="inputState" name="parent_id" class="form-control input-style">
-                                                <option value="{{$data->parent_id}}" selected>{{$data->title}}</option>
-                                                <option value="0">Main Category</option>
+                                                <option value="{{$data->category_id}}" selected>{{$data->title}}</option>
                                                 @foreach($datalist as  $rs)
-                                                    <option value="{{ $rs -> id }}" @if ($rs->id == $data->parent_id) selected="selected" @endif > {{ $rs -> title }} </option>
+                                                    <option value="{{ $rs -> id }}" @if ($rs->id == $data->category_id) selected="selected" @endif > {{ $rs -> title }} </option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -59,6 +58,57 @@
                                     <div class="form-group">
                                         <label>Description</label>
                                         <input type="text" name="description" value="{{$data->description}}" class="form-control input-style">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Image</label>
+                                        <input type="text" name="image" value="{{$data->image}}" class="form-control input-style">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Price</label>
+                                        <input type="number" name="price" value="{{$data->price}}" class="form-control input-style">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>City</label>
+                                        <input type="text" name="city" value="{{$data->city}}" class="form-control input-style">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Country</label>
+                                        <input type="text" name="country" value="{{$data->country}}" class="form-control input-style">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Location</label>
+                                        <input type="text" name="location" value="{{$data->location}}" class="form-control input-style">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Star</label>
+                                        <input type="number" name="star" value="{{$data->star}}" class="form-control input-style">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Adress</label>
+                                        <input type="text" name="address" value="{{$data->address}}" class="form-control input-style">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Phone</label>
+                                        <input type="text" name="phone" value="{{$data->phone}}" class="form-control input-style">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Fax</label>
+                                        <input type="text" name="fax" value="{{$data->fax}}" class="form-control input-style">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="text" name="email" value="{{$data->email}}" class="form-control input-style">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Detail</label>
+                                        <input type="detail" name="detail" value="{{$data->detail}}" class="form-control input-style">
                                     </div>
 
                                     <div class="form-row">

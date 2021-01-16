@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Categories')
+@section('title', 'Hotels')
 
 @section('body')
  <div class="main-content">
@@ -24,17 +24,17 @@
         <section class="content">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Categories</h3>
+                    <h3 class="card-title">Hotels</h3>
                 </div>
 
-{{--                <div class="card">--}}
-{{--                    <div class="card-header">--}}
-{{--                        <h3 class="card-title">Category List</h3>--}}
-{{--                    </div>--}}
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Hotel List</h3>
+                    </div>
 
                     <!-- /.card-header -->
-                    <div class= "card-body">
-                        <a href="{{route('admin_category_add')}}" type="submit" class="btn btn-primary btn-style mt-4">Add Category</a>
+                    <div class="card-body">
+                        <a href="{{route('admin_hotel_add')}}" type="submit" class="btn btn-primary btn-style mt-4">Add Hotel</a>
                         <br>
                         <br>
 
@@ -42,22 +42,32 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Parent_ID</th>
+                                <th>Category</th>
                                 <th>Title</th>
+                                <th>Price</th>
+                                <th>Image</th>
+                                <th>Phone</th>
+                                <th>Fax</th>
+                                <th>Email</th>
                                 <th>Status</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th style="..." colspan="2">Actions</th>
+
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($datalist as  $rs)
                             <tr>
                                 <td>{{ $rs -> id }}</td>
-                                <td>{{ $rs -> parent_id }}</td>
+                                <td>{{ $rs -> category_id }}</td>
                                 <td>{{ $rs -> title }}</td>
+                                <td>{{ $rs -> price }}</td>
+                                <td>{{ $rs -> image }}</td>
+                                <td>{{ $rs -> phone }}</td>
+                                <td>{{ $rs -> fax }}</td>
+                                <td>{{ $rs -> email }}</td>
                                 <td>{{ $rs -> status }}</td>
-                                <td><a href="{{route('admin_category_edit', ['id'=> $rs->id])}}" onclick)">Edit</a></td>
-                                <td><a href="{{route('admin_category_delete', ['id'=> $rs->id])}}" onclick="return confirm('Are you sure? You want to delete this record')">Delete</a></td>
+                                <td><a href="{{route('admin_hotel_edit', ['id'=> $rs->id])}}">Edit</a></td>
+                                <td><a href="{{route('admin_hotel_delete', ['id'=> $rs->id])}}"onclick="return confirm('Are you sure? You want to delete this record')">Delete</a></td>
                             </tr>
                             @endforeach
                          </table>

@@ -40,7 +40,7 @@ class CategoryController extends Controller
         return redirect()->route('admin_category');
     }
 
-    public function add()
+    public function add(Request $request)
     {
         $datalist = DB::table('categories')->get()-> where('parent_id', 0);
        return view('admin.category_add', ['datalist'=>$datalist]);

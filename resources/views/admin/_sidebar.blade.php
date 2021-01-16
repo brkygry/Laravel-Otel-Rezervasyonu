@@ -38,7 +38,7 @@
 {{--                    </ul>--}}
 {{--                </li>--}}
                 <li><a href="{{route('admin_category')}}"><i class="fa fa-table"></i> <span>Category</span></a></li>
-{{--                <li><a href="blocks.html"><i class="fa fa-th"></i> <span>Content blocks</span></a></li>--}}
+                <li><a href="{{route('admin_hotels')}}"><i class="fa fa-th"></i> <span>Hotels</span></a></li>
 {{--                <li><a href="forms.html"><i class="fa fa-file-text"></i> <span>Forms</span></a></li>--}}
             </ul>
             <!-- //sidebar nav end -->
