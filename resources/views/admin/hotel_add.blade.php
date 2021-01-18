@@ -2,6 +2,13 @@
 
 @section('title', 'Hotel Add Page')
 
+@section('javascript')
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+@endsection
+
+
 @section('body')
     <div class="main-content">
         <div class="content-wrapper">
@@ -96,10 +103,6 @@
                                             <label for="inputPassword4" class="input__label">Email</label>
                                             <input type="text" value="@luxehotels.com" name="email" class="form-control input-style">
                                         </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="inputPassword4" class="input__label">Detail</label>
-                                            <input type="detail" name="detail" class="form-control input-style">
-                                        </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
@@ -113,6 +116,25 @@
                                                 <option>True</option>
                                             </select>
                                         </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Detail</label>
+                                        <textarea id="summernote" name="detail"></textarea>
+                                        <script>
+                                            $('#summernote').summernote({
+                                                tabsize: 2,
+                                                height: 120,
+                                                toolbar: [
+                                                    ['style', ['style']],
+                                                    ['font', ['bold', 'underline', 'clear']],
+                                                    ['color', ['color']],
+                                                    ['para', ['ul', 'ol', 'paragraph']],
+                                                    ['table', ['table']],
+                                                    ['insert', ['link', 'picture', 'video']],
+                                                    ['view', ['fullscreen', 'codeview', 'help']]
+                                                ]
+                                            });
+                                        </script>
                                     </div>
 {{--                                    <div class="custom-file">--}}
 {{--                                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>--}}
