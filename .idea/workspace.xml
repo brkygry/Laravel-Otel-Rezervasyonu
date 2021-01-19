@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="Detail için Rich Text Editor eklendi.">
+    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="Image Upload and Display">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c2937198-481f-4c1f-956f-77128dbf88e3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c2937198-481f-4c1f-956f-77128dbf88e3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HotelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HotelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/_hotel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_hotel.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel_add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <list id="1dd81cb0-845e-406e-9c61-eed8e46508da" name="Website template uyarlaması" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -215,7 +211,7 @@
       <workItem from="1610726055173" duration="5814000" />
       <workItem from="1610813243334" duration="10510000" />
       <workItem from="1610971496270" duration="5695000" />
-      <workItem from="1611041367060" duration="6313000" />
+      <workItem from="1611041367060" duration="17233000" />
     </task>
     <task id="LOCAL-00001" summary="Website template uyarlaması">
       <created>1609882423158</created>
@@ -280,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610977023730</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Image Upload and Display">
+      <created>1611048167449</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1611048167449</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,7 +311,8 @@
     <MESSAGE value="Category tablosunda bulunan veriler düzenlenebilir hale getirildi." />
     <MESSAGE value="Hotel tablosu eklendi. Admin panel üzerinden ekleme, silme, düzenleme&#10;yapılabilir hale getirildi. / Çalışmayan Add Category butonu düzeltildi." />
     <MESSAGE value="Detail için Rich Text Editor eklendi." />
-    <option name="LAST_COMMIT_MESSAGE" value="Detail için Rich Text Editor eklendi." />
+    <MESSAGE value="Image Upload and Display" />
+    <option name="LAST_COMMIT_MESSAGE" value="Image Upload and Display" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
