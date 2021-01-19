@@ -36,9 +36,11 @@
                 @csrf
                 <!-- ./row -->
                 <div class="row">
-                        <div class="card card-primary card-tabs col-12">
-                            <div class="card-header p-0 pt-1">
-                                <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                    <div class="col-12 col-sm-12">
+                        <div class="card card-primary card-tabs">
+                            <div class="card-header">
+                                <nav class="navbar navbar-expand-sm bg-light">
+                                <ul class="nav navbar-expand nav-pills" id="custom-tabs-one-tab" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" id="custom-tabs-one-general-tab" data-toggle="pill" href="#custom-tabs-one-general" role="tab" aria-controls="custom-tabs-one-general" aria-selected="true">General</a>
                                     </li>
@@ -49,7 +51,7 @@
                                         <a class="nav-link" id="custom-tabs-one-social-tab" data-toggle="pill" href="#custom-tabs-one-social" role="tab" aria-controls="custom-tabs-one-social" aria-selected="false">Social</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="custom-tabs-one-aboutus-tab" data-toggle="pill" href="#custom-tabs-one-aboutus" role="tab" aria-controls="custom-tabs-one-aboutus" aria-selected="false">Aboutus</a>
+                                        <a class="nav-link" id="custom-tabs-one-aboutus-tab" data-toggle="pill" href="#custom-tabs-one-aboutus" role="tab" aria-controls="custom-tabs-one-aboutus" aria-selected="false">About</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" id="custom-tabs-one-contact-tab" data-toggle="pill" href="#custom-tabs-one-contact" role="tab" aria-controls="custom-tabs-one-contact" aria-selected="false">Contact</a>
@@ -61,10 +63,13 @@
                                         <a class="nav-link" id="custom-tabs-one-status-tab" data-toggle="pill" href="#custom-tabs-one-status" role="tab" aria-controls="custom-tabs-one-status" aria-selected="false">Status</a>
                                     </li>
                                 </ul>
+                                </nav>
                             </div>
+                        </div>
                             <div class="card-body">
                                 <div class="tab-content" id="custom-tabs-one-tabContent">
                                     <div class="tab-pane fade show active" id="custom-tabs-one-general" role="tabpanel" aria-labelledby="custom-tabs-one-general-tab">
+                                    <div class="form-row">
                                         <input type="hidden" id="id" name="id" value="{{$data->id}}" class="form-control input-style">
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword4" class="input__label">Title</label>
@@ -99,7 +104,9 @@
                                             <input type="text" name="email" value="{{$data->email}}" class="form-control input-style">
                                         </div>
                                     </div>
+                                    </div>
                                     <div class="tab-pane fade" id="custom-tabs-one-smtp" role="tabpanel" aria-labelledby="custom-tabs-one-smtp-tab">
+                                    <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword4" class="input__label">smtpserver</label>
                                             <input type="text" name="smtpserver" value="{{$data->smtpserver}}" class="form-control input-style">
@@ -117,7 +124,9 @@
                                             <input type="number" name="smtpport" value="{{$data->smtpport}}" class="form-control input-style">
                                         </div>
                                     </div>
+                                    </div>
                                     <div class="tab-pane fade" id="custom-tabs-one-social" role="tabpanel" aria-labelledby="custom-tabs-one-social-tab">
+                                    <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword4" class="input__label">Facebook</label>
                                             <input type="text" name="facebook" value="{{$data->facebook}}" class="form-control input-style">
@@ -131,12 +140,13 @@
                                             <input type="text" name="twitter" value="{{$data->twitter}}" class="form-control input-style">
                                         </div>
                                     </div>
+                                    </div>
                                     <div class="tab-pane fade" id="custom-tabs-one-aboutus" role="tabpanel" aria-labelledby="custom-tabs-one-aboutus-tab">
                                         <div class="form-group">
                                             <label>About Us</label>
-                                            <textarea id="summernote" name="aboutus">{{$data->aboutus}}</textarea>
+                                            <textarea id="aboutus" name="aboutus">{{$data->aboutus}}</textarea>
                                             <script>
-                                                $('#summernote').summernote({
+                                                $('#aboutus').summernote({
                                                     tabsize: 2,
                                                     height: 120,
                                                     toolbar: [
@@ -155,9 +165,9 @@
                                     <div class="tab-pane fade" id="custom-tabs-one-contact" role="tabpanel" aria-labelledby="custom-tabs-one-contact-tab">
                                         <div class="form-group">
                                             <label>Contact</label>
-                                            <textarea id="summernote" name="contact">{{$data->contact}}</textarea>
+                                            <textarea id="contact" name="contact">{{$data->contact}}</textarea>
                                             <script>
-                                                $('#summernote').summernote({
+                                                $('#contact').summernote({
                                                     tabsize: 2,
                                                     height: 120,
                                                     toolbar: [
@@ -176,9 +186,9 @@
                                     <div class="tab-pane fade" id="custom-tabs-one-references" role="tabpanel" aria-labelledby="custom-tabs-one-references-tab">
                                         <div class="form-group">
                                             <label>References</label>
-                                            <textarea id="summernote" name="references">{{$data->references}}</textarea>
+                                            <textarea id="references" name="references">{{$data->references}}</textarea>
                                             <script>
-                                                $('#summernote').summernote({
+                                                $('#references').summernote({
                                                     tabsize: 2,
                                                     height: 120,
                                                     toolbar: [
@@ -193,6 +203,7 @@
                                                 });
                                             </script>
                                         </div>
+
                                     </div>
                                     <div class="tab-pane fade" id="custom-tabs-one-status" role="tabpanel" aria-labelledby="custom-tabs-one-status-tab">
                                         <div class="form-group col-md-4">
@@ -207,11 +218,11 @@
                                 </div>
                             </div>
                             <!-- /.card -->
-                        </div>
-                </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Update Settings</button>
                     </div>
+                    </div>
+                </div>
                 </section>
                 </form>
         </div>

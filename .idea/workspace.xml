@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="Setting tablosu migrate edildi. Settingi düzenlemek için gerekli sayfa admin panele eklendi.&#10;Hata: Tek sayfada birden fazla rich text editor çalışmıyor.">
+    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="Category ve Hotel arasında One to Many ilişkisi kuruldu.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Hotel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Hotel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_hotel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_hotel.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/setting_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/setting_edit.blade.php" afterDir="false" />
     </list>
     <list id="1dd81cb0-845e-406e-9c61-eed8e46508da" name="Website template uyarlaması" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +210,7 @@
       <workItem from="1610813243334" duration="10510000" />
       <workItem from="1610971496270" duration="5695000" />
       <workItem from="1611041367060" duration="30205000" />
-      <workItem from="1611092959362" duration="844000" />
+      <workItem from="1611092959362" duration="5483000" />
     </task>
     <task id="LOCAL-00001" summary="Website template uyarlaması">
       <created>1609882423158</created>
@@ -298,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611075734800</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Category ve Hotel arasında One to Many ilişkisi kuruldu.">
+      <created>1611093871528</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1611093871528</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,7 +334,8 @@
     <MESSAGE value="Image Upload and Display" />
     <MESSAGE value="Image Gallery Eklendi." />
     <MESSAGE value="Setting tablosu migrate edildi. Settingi düzenlemek için gerekli sayfa admin panele eklendi.&#10;Hata: Tek sayfada birden fazla rich text editor çalışmıyor." />
-    <option name="LAST_COMMIT_MESSAGE" value="Setting tablosu migrate edildi. Settingi düzenlemek için gerekli sayfa admin panele eklendi.&#10;Hata: Tek sayfada birden fazla rich text editor çalışmıyor." />
+    <MESSAGE value="Category ve Hotel arasında One to Many ilişkisi kuruldu." />
+    <option name="LAST_COMMIT_MESSAGE" value="Category ve Hotel arasında One to Many ilişkisi kuruldu." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
