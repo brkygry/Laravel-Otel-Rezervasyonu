@@ -37,9 +37,9 @@
 {{--                        <li><a href="people.html">People cards</a></li>--}}
 {{--                    </ul>--}}
 {{--                </li>--}}
-                <li><a href="{{route('admin_category')}}"><i class="fa fa-table"></i> <span>Category</span></a></li>
-                <li><a href="{{route('admin_hotels')}}"><i class="fa fa-th"></i> <span>Hotels</span></a></li>
-{{--                <li><a href="forms.html"><i class="fa fa-file-text"></i> <span>Forms</span></a></li>--}}
+                <li><a href="{{route('admin_category')}}"><i class="fa fa-th"></i> <span>Category</span></a></li>
+                <li><a href="{{route('admin_hotels')}}"><i class="fa fa-university"></i> <span>Hotels</span></a></li>
+                <li><a href="{{route('admin_setting')}}"><i class="fa fa-wrench"></i> <span>Settings</span></a></li>
             </ul>
             <!-- //sidebar nav end -->
             <!-- toggle button start -->
