@@ -70,7 +70,7 @@
                                         <div class="form-group col-md-4">
                                             <label>Status</label>
                                             <select id="inputState" name="status" class="form-control input-style">
-                                                <option selectedvalue="{{$data->status}}"> </option>
+                                                <option selected="selected">{{$data->status}}</option>
                                                 <option>True</option>
                                                 <option>False</option>
                                             </select>

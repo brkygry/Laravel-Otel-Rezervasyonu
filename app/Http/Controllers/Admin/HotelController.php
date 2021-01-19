@@ -8,6 +8,7 @@ use App\Models\Hotel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class HotelController extends Controller
 {
@@ -48,7 +49,6 @@ class HotelController extends Controller
         $data->description = $request->input('description');
         $data->slug = $request->input('slug');
         $data->status = $request->input('status');
-        $data->image = $request->input('image');
         $data->user_id = Auth::id();
         $data->price = $request->input('price');
         $data->detail = $request->input('detail');
@@ -60,6 +60,7 @@ class HotelController extends Controller
         $data->city = $request->input('city');
         $data->country = $request->input('country');
         $data->location = $request->input('location');
+        $data->image = Storage::putFile('images', $request->file('image'));
 
         $data->save();
         return redirect()->route('admin_hotels');
@@ -85,7 +86,7 @@ class HotelController extends Controller
     public function edit(Hotel $hotel, $id)
     {
         $data = Hotel::find($id);
-        $datalist = DB::table('hotels')->get();
+        $datalist = Category::all();
         return view('admin.hotel_edit',['data'=>$data, 'datalist'=>$datalist]);
     }
 
@@ -106,7 +107,6 @@ class HotelController extends Controller
         $data->description = $request->input('description');
         $data->slug = $request->input('slug');
         $data->status = $request->input('status');
-        $data->image = $request->input('image');
         $data->user_id = Auth::id();
         $data->price = $request->input('price');
         $data->detail = $request->input('detail');
@@ -118,6 +118,11 @@ class HotelController extends Controller
         $data->city = $request->input('city');
         $data->country = $request->input('country');
         $data->location = $request->input('location');
+
+        if($request->file('image')!=null)
+        {
+            $data->image = Storage::putFile('images', $request->file('image'));
+        }
 
         $data->save();
         return redirect()->route('admin_hotels');

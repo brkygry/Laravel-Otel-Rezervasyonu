@@ -61,7 +61,11 @@
                                 <td>{{ $rs -> category_id }}</td>
                                 <td>{{ $rs -> title }}</td>
                                 <td>{{ $rs -> price }}</td>
-                                <td>{{ $rs -> image }}</td>
+                                <td>
+                                    @if($rs->image)
+                                        <img src="{{Storage::url($rs->image)}}" height="40" alt="">
+                                    @endif
+                                </td>
                                 <td>{{ $rs -> phone }}</td>
                                 <td>{{ $rs -> fax }}</td>
                                 <td>{{ $rs -> email }}</td>

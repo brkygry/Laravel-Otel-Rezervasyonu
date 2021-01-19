@@ -38,7 +38,7 @@
                         <!-- forms 2 -->
                         <div class="card card_border py-2 mb-4">
                             <div class="card-body">
-                                <form action="{{route('admin_hotel_store')}}" method="post">
+                                <form action="{{route('admin_hotel_store')}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
@@ -62,10 +62,6 @@
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword4" class="input__label">Description</label>
                                             <input type="text" name="description" class="form-control input-style">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="inputPassword4" class="input__label">Image</label>
-                                            <input type="text" name="image" class="form-control input-style">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword4" class="input__label">Price</label>
@@ -135,6 +131,11 @@
                                                 ]
                                             });
                                         </script>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Image</label>
+                                        <input type="file" name="image" class="form-control">
                                     </div>
 {{--                                    <div class="custom-file">--}}
 {{--                                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>--}}

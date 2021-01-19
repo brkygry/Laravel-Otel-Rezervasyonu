@@ -44,63 +44,59 @@
                                             <label for="inputEmail4" class="input__label">Parent</label>
                                             <select id="inputState" name="category_id" class="form-control input-style">
                                                 @foreach($datalist as  $rs)
-                                                    <option value="{{ $rs -> id }}">{{ $rs -> title }}</option>
+                                                    <option value="{{$rs->id}}" @if($rs->id == $data->category_id) selected="selected" @endif > {{$rs -> title}}</option>
                                                 @endforeach
                                             </select>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword4" class="input__label">Title</label>
-                                            <input type="text" name="title" class="form-control input-style">
+                                            <input type="text" name="title" value="{{$data->title}}" class="form-control input-style">
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword4" class="input__label">Keywords</label>
-                                            <input type="text" name="keywords" class="form-control input-style">
+                                            <input type="text" name="keywords" value="{{$data->keywords}}" class="form-control input-style">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword4" class="input__label">Description</label>
-                                            <input type="text" name="description" class="form-control input-style">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="inputPassword4" class="input__label">Image</label>
-                                            <input type="text" name="image" class="form-control input-style">
+                                            <input type="text" name="description" value="{{$data->description}}" class="form-control input-style">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword4" class="input__label">Price</label>
-                                            <input type="number" value="0" name="price" class="form-control input-style">
+                                            <input type="number" name="price" value="{{$data->price}}" class="form-control input-style">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword4" class="input__label">City</label>
-                                            <input type="text" name="city" class="form-control input-style">
+                                            <input type="text" name="city" value="{{$data->city}}" class="form-control input-style">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword4" class="input__label">Country</label>
-                                            <input type="text" name="country" class="form-control input-style">
+                                            <input type="text" name="country" value="{{$data->country}}" class="form-control input-style">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword4" class="input__label">Location</label>
-                                            <input type="text" name="location" class="form-control input-style">
+                                            <input type="text" name="location" value="{{$data->location}}" class="form-control input-style">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword4" class="input__label">Star</label>
-                                            <input type="number" value="0" name="star" class="form-control input-style">
+                                            <input type="number" name="star" value="{{$data->star}}" class="form-control input-style">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword4" class="input__label">Address</label>
-                                            <input type="text" name="address" class="form-control input-style">
+                                            <input type="text" name="address" value="{{$data->address}}" class="form-control input-style">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword4" class="input__label">Phone</label>
-                                            <input type="text" name="phone" class="form-control input-style">
+                                            <input type="text" name="phone" value="{{$data->phone}}" class="form-control input-style">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword4" class="input__label">Fax</label>
-                                            <input type="text" name="fax" class="form-control input-style">
+                                            <input type="text" name="fax" value="{{$data->fax}}" class="form-control input-style">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword4" class="input__label">Email</label>
-                                            <input type="text" value="@luxehotels.com" name="email" class="form-control input-style">
+                                            <input type="text" name="email" value="{{$data->email}}" class="form-control input-style">
                                         </div>
 
                                     </div>
@@ -108,19 +104,22 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword4" class="input__label">Slug</label>
-                                            <input type="text" name="slug" class="form-control input-style">
+                                            <input type="text" name="slug" value="{{$data->slug}}" class="form-control input-style">
                                         </div>
+
+
                                         <div class="form-group col-md-4">
-                                            <label for="inputState" class="input__label">Status</label>
+                                            <label>Status</label>
                                             <select id="inputState" name="status" class="form-control input-style">
-                                                <option selected>False</option>
+                                                <option selected="selected">{{$data->status}}</option>
                                                 <option>True</option>
+                                                <option>False</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label>Detail</label>
-                                        <textarea id="summernote" name="detail"></textarea>
+                                        <textarea id="summernote" name="detail">{{$data->detail}}</textarea>
                                         <script>
                                             $('#summernote').summernote({
                                                 tabsize: 2,
@@ -136,6 +135,14 @@
                                                 ]
                                             });
                                         </script>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Image</label>
+                                        <input type="file" name="image" class="form-control">
+
+                                        @if ($data->image)
+                                            <img src="{{Storage::url($data->image)}}" height="100" alt="">
+                                        @endif
                                     </div>
 {{--                                    <div class="custom-file">--}}
 {{--                                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>--}}
