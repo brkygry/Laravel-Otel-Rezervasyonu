@@ -37,12 +37,15 @@
                                         <div class="form-group col-md-6">
                                             <label for="inputEmail4" class="input__label">Parent</label>
                                             <select id="inputState" name="parent_id" class="form-control input-style">
-                                                <option value="{{$data->parent_id}}" selected>{{$data->title}}</option>
-                                                <option value="0">Main Category</option>
+{{--                                                <option value="{{$data->parent_id}}" selected>{{$data->title}}</option>--}}
+                                                <option value="0" selected="selected">Main Category</option>
                                                 @foreach($datalist as  $rs)
-                                                    <option value="{{ $rs -> id }}" @if ($rs->id == $data->parent_id) selected="selected" @endif > {{ $rs -> title }} </option>
+                                                    <option value="{{ $rs -> id }}" @if ($rs->id == $data->parent_id) selected="selected" @endif>
+                                                        {{\App\Http\Controllers\Admin\CategoryController::getParentsTree($rs, $rs->title)}}
+                                                    </option>
                                                 @endforeach
                                             </select>
+
                                         </div>
 
                                         <div class="form-group col-md-6">

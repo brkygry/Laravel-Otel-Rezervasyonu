@@ -41,10 +41,12 @@
                                     @csrf
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="inputEmail4" class="input__label">Parent</label>
+                                            <label for="inputEmail4" class="input__label">Category</label>
                                             <select id="inputState" name="category_id" class="form-control input-style">
                                                 @foreach($datalist as  $rs)
-                                                    <option value="{{$rs->id}}" @if($rs->id == $data->category_id) selected="selected" @endif > {{$rs -> title}}</option>
+                                                    <option value="{{$rs->id}}" @if($rs->id == $data->category_id) selected="selected" @endif>
+                                                        {{\App\Http\Controllers\Admin\CategoryController::getParentsTree($rs, $rs->title)}}
+                                                    </option>
                                                 @endforeach
                                             </select>
                                         </div>
