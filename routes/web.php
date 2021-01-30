@@ -16,7 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::redirect('/anasayfa', '/');
 Route::redirect('/home', '/');
 
-Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home_home');
+Route::get('/aboutus', [\App\Http\Controllers\HomeController::class, 'aboutus'])->name('aboutus');
+Route::get('/contact', [\App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
+Route::get('/services', [\App\Http\Controllers\HomeController::class, 'services'])->name('services');
+Route::get('/hotels', [\App\Http\Controllers\HomeController::class, 'hotels'])->name('hotels');
 
 
 
@@ -25,7 +29,7 @@ Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
 Route::get('/admin',[\App\Http\Controllers\Admin\HomeController::class, 'index']) -> name('admin_home')->middleware("auth");
 Route::get('/admin/login', [\App\Http\Controllers\HomeController::class, 'login'])->name('admin_login');
 Route::post('/admin/logincheck', [\App\Http\Controllers\HomeController::class, 'logincheck'])->name('admin_login_check');
-Route::get('/admin/logout', [\App\Http\Controllers\HomeController::class, 'logout'])->name('admin_log_out');
+Route::get('/logout', [\App\Http\Controllers\HomeController::class, 'logout'])->name('admin_log_out');
 
 
 Route::middleware('auth')->prefix('admin')->group(function (){
@@ -59,37 +63,6 @@ Route::middleware('auth')->prefix('admin')->group(function (){
     Route::get('setting', [\App\Http\Controllers\Admin\SettingController::class, 'index'])->name('admin_setting');
     Route::post('setting/update',[\App\Http\Controllers\Admin\SettingController::class, 'update'])->name('admin_setting_update');
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

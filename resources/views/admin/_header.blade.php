@@ -115,9 +115,12 @@
                                 </li>
                                 <li> <a href="#"><i class="lnr lnr-user"></i>My Profile</a> </li>
                                 <li> <a href="#"><i class="lnr lnr-users"></i>1k Followers</a> </li>
-                                <li> <a href="#"><i class="lnr lnr-cog"></i>Setting</a> </li>
+                                <li> <a href="{{route('admin_setting')}}"><i class="lnr lnr-cog"></i>Setting</a> </li>
                                 <li> <a href="#"><i class="lnr lnr-heart"></i>100 Likes</a> </li>
+                                @auth
+                                    <a href="#" class="d-block">{{ Auth::user()->name }}</a>
                                 <li class="logout"> <a href="{{route('admin_log_out')}}"> <i class="fa fa-power-off"></i></a> </i> Logout</a> </li>
+                                @endauth
                             </ul>
                         </li>
                     </ul>

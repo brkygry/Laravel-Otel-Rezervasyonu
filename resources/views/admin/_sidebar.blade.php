@@ -51,3 +51,4 @@
         </div>
     </div>
     <!-- //sidebar menu end -->
+</section>

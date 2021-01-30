@@ -1,10 +1,14 @@
+@php
+    $setting = \App\Http\Controllers\HomeController::getSetting();
+@endphp
+
 <footer id="footer" class="fh5co-bg-color">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
                 <div class="copyright">
-                    <p><small>&copy; 2016 Free HTML5 Template. <br> All Rights Reserved. <br>
-                            Designed by <a href="http://freehtml5.co" target="_blank">FreeHTML5.co</a> <br> Demo Images: <a href="http://unsplash.com/" target="_blank">Unsplash</a></small></p>
+                    <p><small>&copy; 2021 <br> All Rights Reserved. <br>
+                            Designed by {{$setting->company}} </small></p>
                 </div>
             </div>
             <div class="col-md-6">
@@ -12,10 +16,10 @@
                     <div class="col-md-3">
                         <h3>Company</h3>
                         <ul class="link">
-                            <li><a href="#">About Us</a></li>
+                            <li><a href="{{route('contact')}}">About Us</a></li>
                             <li><a href="#">Hotels</a></li>
                             <li><a href="#">Customer Care</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="{{route('contact')}}">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3">
@@ -31,7 +35,7 @@
                     </div>
                     <div class="col-md-6">
                         <h3>Subscribe</h3>
-                        <p>Sed cursus ut nibh in semper. Mauris varius et magna in fermentum. </p>
+                        <p>Abone olmak için aşağıdaki alana email adresinizi yazın. </p>
                         <form action="#" id="form-subscribe">
                             <div class="form-field">
                                 <input type="email" placeholder="Email Address" id="email">
@@ -44,10 +48,9 @@
             <div class="col-md-3">
                 <ul class="social-icons">
                     <li>
-                        <a href="#"><i class="icon-twitter-with-circle"></i></a>
-                        <a href="#"><i class="icon-facebook-with-circle"></i></a>
-                        <a href="#"><i class="icon-instagram-with-circle"></i></a>
-                        <a href="#"><i class="icon-linkedin-with-circle"></i></a>
+                        @if($setting->facebook != null) <a href="{{$setting->facebook}}"><i class="icon-facebook-with-circle"></i></a> @endif
+                        @if($setting->twitter != null) <a href="{{$setting->twitter}}"><i class="icon-twitter-with-circle"></i></a> @endif
+                        @if($setting->instagram != null) <a href="{{$setting->instagram}}"><i class="icon-instagram-with-circle"></i></a> @endif
                     </li>
                 </ul>
             </div>

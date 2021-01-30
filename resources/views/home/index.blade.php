@@ -1,12 +1,10 @@
 @extends('layouts.home')
 
-@section('title', 'Laravel Hotel Reservation Website')
+@section('title', $setting->title)
 
-@section('description')
-    Türkiye'nin en iyi otel zinciri
-    @endsection
+@section('description') {{$setting->description}} @endsection
 
-@section('keywords', 'Hotel, Reservation, Booking, Flight')
+@section('keywords', $setting->keywords)
 
 @section('body')
     <div id="fh5co-counter-section" class="fh5co-counters">
