@@ -1,7 +1,6 @@
 @php
     $setting = \App\Http\Controllers\HomeController::getSetting();
 @endphp
-
 <footer id="footer" class="fh5co-bg-color">
     <div class="container">
         <div class="row">

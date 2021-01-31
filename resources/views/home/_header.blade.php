@@ -1,7 +1,7 @@
 @php
     $setting = \App\Http\Controllers\HomeController::getSetting();
     $parentCategories = \App\Http\Controllers\HomeController::categoryList();
-    @endphp
+@endphp
 
 
 <!-- google fonts -->
@@ -50,14 +50,14 @@
                                         <li class="user-info">
                                             <h5 class="user-name">{{ Auth::user()->name }}</h5>
                                         </li>
-                                        <li> <a href="#"><i class="lnr lnr-user"></i>My Profile</a> </li>
+                                        <li> <a href="{{route('myprofile')}}"><i class="lnr lnr-user"></i>My Profile</a> </li>
                                         <li> <a href="{{route('admin_setting')}}"><i class="lnr lnr-cog"></i>Setting</a> </li>
 
                                             <a href="#" class="d-block">{{ Auth::user()->name }}</a>
                                             <li class="logout"> <a href="{{route('admin_log_out')}}"> <i class="fa fa-power-off"></i>Logout</a></li>
-                                        @endauth
                                     </ul>
                                 </li>
+                                @endauth
                             </ul>
                         </nav>
                     </div>

@@ -2,7 +2,7 @@
 
 namespace Http\Controllers\Admin;
 
-use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\AdminHomeController;
 use PHPUnit\Framework\TestCase;
 
 class HomeControllerTest extends TestCase

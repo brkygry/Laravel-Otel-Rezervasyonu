@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="Categories Anasayfaya eklendi.">
+    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="Home Page Setting, Meta tags ayarlandı. Anasayfaya login işlemleri eklendi.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminHomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/admin/assets/images/profileimg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Admin/HomeControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Admin/HomeControllerTest.php" afterDir="false" />
     </list>
     <list id="1dd81cb0-845e-406e-9c61-eed8e46508da" name="Website template uyarlaması" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -171,13 +168,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/home" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\brkyg\Desktop\php-odev\phplaravelodev\resources\views\home" />
       <recent name="C:\Users\brkyg\Desktop\php-odev\phplaravelodev\resources\views\admin" />
     </key>
   </component>
@@ -223,7 +221,9 @@
       <workItem from="1611229373652" duration="2439000" />
       <workItem from="1611283044607" duration="6651000" />
       <workItem from="1611938201878" duration="3939000" />
-      <workItem from="1612013392478" duration="3071000" />
+      <workItem from="1612013392478" duration="3881000" />
+      <workItem from="1612097714921" duration="96000" />
+      <workItem from="1612097845181" duration="5762000" />
     </task>
     <task id="LOCAL-00001" summary="Website template uyarlaması">
       <created>1609882423158</created>
@@ -330,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611149906913</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Home Page Setting, Meta tags ayarlandı. Anasayfaya login işlemleri eklendi.">
+      <created>1612016730621</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1612016730621</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,7 +371,8 @@
     <MESSAGE value="Category ve Hotel arasında One to Many ilişkisi kuruldu." />
     <MESSAGE value="Settings Rich Text Editor hatası giderildi. NavBar yatay olarak düzenlendi." />
     <MESSAGE value="Categories Anasayfaya eklendi." />
-    <option name="LAST_COMMIT_MESSAGE" value="Categories Anasayfaya eklendi." />
+    <MESSAGE value="Home Page Setting, Meta tags ayarlandı. Anasayfaya login işlemleri eklendi." />
+    <option name="LAST_COMMIT_MESSAGE" value="Home Page Setting, Meta tags ayarlandı. Anasayfaya login işlemleri eklendi." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
