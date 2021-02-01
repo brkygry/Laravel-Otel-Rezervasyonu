@@ -31,6 +31,8 @@
                                 </li>
                                 <li><a href="{{route('hotels')}}">Hotels</a></li>
                                 <li><a href="{{route('services')}}">Services</a></li>
+                                <li><a href="{{route('aboutus')}}">About Us</a></li>
+                                <li><a href="{{route('references')}}">References</a></li>
                                 <li><a href="{{route('contact')}}">Contact</a></li>
                                 @guest
                                 <li><a href="/login">Login</a></li>

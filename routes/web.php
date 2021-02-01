@@ -28,7 +28,9 @@ Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/hotels', [HomeController::class, 'hotels'])->name('hotels');
+Route::get('/references', [HomeController::class, 'references'])->name('references');
 Route::get('/blank', [HomeController::class, 'blank'])->name('blank');
+
 
 
 

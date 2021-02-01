@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="Profile Page oluşturuldu, JetStream profil sayfası panele eklendi.">
+    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="Profil sayfasına fotoğraf, telefon ve adres satırları eklendi.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminHomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminHomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_blank.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_blank.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <list id="1dd81cb0-845e-406e-9c61-eed8e46508da" name="Website template uyarlaması" comment="" />
@@ -224,7 +223,7 @@
       <workItem from="1612097714921" duration="96000" />
       <workItem from="1612097845181" duration="6059000" />
       <workItem from="1612116886789" duration="1339000" />
-      <workItem from="1612188742406" duration="3787000" />
+      <workItem from="1612188742406" duration="5907000" />
     </task>
     <task id="LOCAL-00001" summary="Website template uyarlaması">
       <created>1609882423158</created>
@@ -345,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612104262435</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Profil sayfasına fotoğraf, telefon ve adres satırları eklendi.">
+      <created>1612193693704</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1612193693704</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +387,8 @@
     <MESSAGE value="Categories Anasayfaya eklendi." />
     <MESSAGE value="Home Page Setting, Meta tags ayarlandı. Anasayfaya login işlemleri eklendi." />
     <MESSAGE value="Profile Page oluşturuldu, JetStream profil sayfası panele eklendi." />
-    <option name="LAST_COMMIT_MESSAGE" value="Profile Page oluşturuldu, JetStream profil sayfası panele eklendi." />
+    <MESSAGE value="Profil sayfasına fotoğraf, telefon ve adres satırları eklendi." />
+    <option name="LAST_COMMIT_MESSAGE" value="Profil sayfasına fotoğraf, telefon ve adres satırları eklendi." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

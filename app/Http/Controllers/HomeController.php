@@ -29,7 +29,8 @@ class HomeController extends Controller
 
     public function aboutus()
     {
-        return view('home.about');
+        $setting = Setting::first();
+        return view('home.about', ['setting'=>$setting]);
     }
 
     public function services()
@@ -50,6 +51,11 @@ class HomeController extends Controller
     public function blank()
     {
         return view('home._blank');
+    }
+
+    public function references()
+    {
+        return view('home.references');
     }
 
 
