@@ -1601,17 +1601,25 @@ tokenable_id</ColNames>
       <Position>12</Position>
       <DataType>timestamp|0s</DataType>
     </column>
-    <index id="459" parent="343" name="users_email_unique">
+    <column id="459" parent="343" name="phone">
+      <Position>13</Position>
+      <DataType>varchar(20)|0s</DataType>
+    </column>
+    <column id="460" parent="343" name="address">
+      <Position>14</Position>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <index id="461" parent="343" name="users_email_unique">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="460" parent="343" name="PRIMARY">
+    <key id="462" parent="343" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="461" parent="343" name="users_email_unique">
+    <key id="463" parent="343" name="users_email_unique">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>users_email_unique</UnderlyingIndexName>
     </key>
