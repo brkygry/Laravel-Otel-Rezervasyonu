@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\HotelController;
 use App\Http\Controllers\Admin\ImageController;
+use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
@@ -26,6 +27,7 @@ Route::redirect('/home', '/');
 Route::get('/', [HomeController::class, 'index'])->name('home_home');
 Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendmessage');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/hotels', [HomeController::class, 'hotels'])->name('hotels');
 Route::get('/references', [HomeController::class, 'references'])->name('references');
@@ -72,6 +74,15 @@ Route::middleware('auth')->prefix('admin')->group(function (){
     #Setting
     Route::get('setting', [SettingController::class, 'index'])->name('admin_setting');
     Route::post('setting/update',[SettingController::class, 'update'])->name('admin_setting_update');
+
+    #Message
+    Route::prefix('message')->group(function (){
+        Route::get('/',[MessageController::class, 'index'])->name('admin_message');
+        Route::get('/edit/{id}',[MessageController::class, 'edit'])->name('admin_message_edit');
+        Route::post('/update/{id}',[MessageController::class, 'update'])->name('admin_message_update');
+        Route::get('/delete/{id}',[MessageController::class, 'destroy'])->name('admin_message_delete');
+        Route::get('/show',[MessageController::class, 'show'])->name('admin_message_show');
+    });
 });
 
 Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function (){

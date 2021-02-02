@@ -113,26 +113,41 @@
                     </div>
                     <div class="col-md-12">
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Name">
+                            @include('home.message')
+                            <form id="checkout-form" class="clearfix" action="{{route('sendmessage')}}" method="post">
+                                @csrf
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input name="name" type="text" class="form-control" placeholder="Name">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Email">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input name="email" type="text" class="form-control" placeholder="Email">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input name="phone" type="text" class="form-control" placeholder="Phone Number">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <input type="submit" value="Send Message" class="btn btn-primary">
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input name="subject" type="text" class="form-control" placeholder="Subject">
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="submit" value="Send Message" class="btn btn-primary">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

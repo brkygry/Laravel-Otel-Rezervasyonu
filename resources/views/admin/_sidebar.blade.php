@@ -40,6 +40,7 @@
                 <li><a href="{{route('admin_category')}}"><i class="fa fa-th"></i> <span>Category</span></a></li>
                 <li><a href="{{route('admin_hotels')}}"><i class="fa fa-university"></i> <span>Hotels</span></a></li>
                 <li><a href="{{route('admin_setting')}}"><i class="fa fa-wrench"></i> <span>Settings</span></a></li>
+                <li><a href="{{route('admin_message')}}"><i class="fa fa-envelope-o"></i> <span>Contact</span></a></li>
             </ul>
             <!-- //sidebar nav end -->
             <!-- toggle button start -->

@@ -9,12 +9,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h3>Blank Page</h3>
+                        <h3>Category Page</h3>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Blank Page</li>
+                            <li class="breadcrumb-item active">Category Page</li>
                         </ol>
                     </div>
                 </div>
@@ -45,8 +45,7 @@
                                 <th>Parent_ID</th>
                                 <th>Title</th>
                                 <th>Status</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th style="..." colspan="2">Actions</th>
                             </tr>
                             </thead>
                             <tbody>
