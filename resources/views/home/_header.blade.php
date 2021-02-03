@@ -16,12 +16,11 @@
                             <ul class="sf-menu" id="fh5co-primary-menu">
                                 <li><a class="active" href="{{route('home_home')}}">Home</a></li>
                                 <li>
-                                    <a href="hotel.html" class="fh5co-sub-ddown">Categories</a>
+                                    <a class="fh5co-sub-ddown">Categories</a>
                                     <ul class="fh5co-sub-menu">
                                         @foreach($parentCategories as $rs)
                                             <li>
                                                 <a href="#" class="fh5co-sub-ddown">{{$rs->title}}</a>
-                                                    <li><a>{{$rs->title}}</a></li>
                                                     @if(count($rs->children))
                                                         @include('home.categorytree', ['children'=> $rs->children])
                                                     @endif
@@ -45,18 +44,15 @@
                                        aria-expanded="false">
                                         <div class="profile_img">
                                             <img src="{{asset('assets')}}/admin/assets/images/profileimg.png" class="img-circle" style="height: 50px" alt="img" />
-
                                         </div>
                                     </a>
                                     <ul class="fh5co-sub-menu">
                                         <li class="user-info">
-                                            <h5 class="user-name">{{ Auth::user()->name }}</h5>
+                                            <h9 class="user-name">{{ Auth::user()->name }}</h9>
                                         </li>
-                                        <li> <a href="{{route('myprofile')}}"><i class="lnr lnr-user"></i>My Profile</a> </li>
-                                        <li> <a href="{{route('admin_setting')}}"><i class="lnr lnr-cog"></i>Setting</a> </li>
-
-                                            <a href="#" class="d-block">{{ Auth::user()->name }}</a>
-                                            <li class="logout"> <a href="{{route('admin_log_out')}}"> <i class="fa fa-power-off"></i>Logout</a></li>
+                                        <li> <a href="{{route('myprofile')}}">My Profile</a> </li>
+                                        <li> <a href="{{route('admin_setting')}}">Setting</a> </li>
+                                        <li class="logout"> <a href="{{route('admin_log_out')}}">Logout</a></li>
                                     </ul>
                                 </li>
                                 @endauth

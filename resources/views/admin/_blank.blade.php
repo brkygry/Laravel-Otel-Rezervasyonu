@@ -35,10 +35,6 @@
                     <div class="card-body">
                         Blank Body
                     </div>
-
-                    <div class="card-footer">
-                        Blank Footer
-                    </div>
                 </div>
             </section>
         </div>

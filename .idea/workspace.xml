@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="Referanslar, iletişim ve hakkımızda sayfaları eklendi.">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c2937198-481f-4c1f-956f-77128dbf88e3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c2937198-481f-4c1f-956f-77128dbf88e3.xml" afterDir="false" />
+    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="Contact mesajları admin panelde yönetilebilir hale getirildi.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/luxe/images/slider1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPS/luxe/images/slider1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/slider1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/slider1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_blank.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_blank.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/_category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_category.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_hotel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_hotel.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/image_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/image_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/messages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/messages.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_aside.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_blog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_blog.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_countersection.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_countersection.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_featuredhotels.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_featuredhotels.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_hotelfacilities.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_hotelfacilities.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_testimonial.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/comment.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/hotelbook.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/hotelbook.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <list id="1dd81cb0-845e-406e-9c61-eed8e46508da" name="Website template uyarlaması" comment="" />
@@ -227,7 +243,8 @@
       <workItem from="1612116886789" duration="1339000" />
       <workItem from="1612188742406" duration="6028000" />
       <workItem from="1612268815045" duration="3166000" />
-      <workItem from="1612278688051" duration="8833000" />
+      <workItem from="1612278688051" duration="9262000" />
+      <workItem from="1612351335020" duration="10784000" />
     </task>
     <task id="LOCAL-00001" summary="Website template uyarlaması">
       <created>1609882423158</created>
@@ -369,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612195563884</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Contact mesajları admin panelde yönetilebilir hale getirildi.">
+      <created>1612288707317</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1612288707317</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +431,8 @@
     <MESSAGE value="Profile Page oluşturuldu, JetStream profil sayfası panele eklendi." />
     <MESSAGE value="Profil sayfasına fotoğraf, telefon ve adres satırları eklendi." />
     <MESSAGE value="Referanslar, iletişim ve hakkımızda sayfaları eklendi." />
-    <option name="LAST_COMMIT_MESSAGE" value="Referanslar, iletişim ve hakkımızda sayfaları eklendi." />
+    <MESSAGE value="Contact mesajları admin panelde yönetilebilir hale getirildi." />
+    <option name="LAST_COMMIT_MESSAGE" value="Contact mesajları admin panelde yönetilebilir hale getirildi." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Modernize an Admin Panel Category Bootstrap Responsive Web Template | Login :: w3layouts</title>
+    <title>Login Screen</title>
     <!-- Meta Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">

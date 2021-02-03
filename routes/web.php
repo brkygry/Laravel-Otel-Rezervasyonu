@@ -32,6 +32,7 @@ Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/hotels', [HomeController::class, 'hotels'])->name('hotels');
 Route::get('/references', [HomeController::class, 'references'])->name('references');
 Route::get('/blank', [HomeController::class, 'blank'])->name('blank');
+Route::get('hotel/{id}/{slug}', [HomeController::class, 'hotels'])->name('hotel');
 
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Hotel;
 use App\Models\Message;
 use App\Models\Setting;
 use Illuminate\Http\Request;
@@ -25,7 +26,20 @@ class HomeController extends Controller
     public function  index()
     {
         $setting = Setting::first();
-        return view('home.index', ['setting'=>$setting]);
+        $slider = Hotel::select('id', 'title', 'image', 'price', 'description', 'slug')->limit(4)->get();
+        $data=[
+            'setting'=>$setting,
+            'slider'=>$slider,
+            'page'=>'home'
+        ];
+        return view('home.index', ['setting'=>$setting], $data);
+    }
+
+    public function hotel($id, $slug)
+    {
+        $data = Hotel::find($id);
+        print_r($data);
+        exit();
     }
 
     public function aboutus()
@@ -59,7 +73,13 @@ class HomeController extends Controller
 
     public function hotels()
     {
-        return view('home.hotelbook');
+        $setting = Setting::first();
+        $slider = Hotel::select('id', 'title', 'image', 'price', 'description', 'slug')->get();
+        $data=[
+            'setting'=>$setting,
+            'slider'=>$slider,
+        ];
+        return view('home.hotelbook', ['setting'=>$setting], $data);
     }
 
     public function blank()

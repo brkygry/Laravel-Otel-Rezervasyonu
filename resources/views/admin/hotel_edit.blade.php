@@ -163,10 +163,6 @@
                         </div>
                         <!-- //forms 2 -->
                     </div>
-
-                    <div class="card-footer">
-                        Footer
-                    </div>
                 </div>
             </section>
         </div>
