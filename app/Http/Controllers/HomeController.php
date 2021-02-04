@@ -26,7 +26,7 @@ class HomeController extends Controller
     public function  index()
     {
         $setting = Setting::first();
-        $slider = Hotel::select('id', 'title', 'image', 'price', 'description', 'slug')->limit(4)->get();
+        $slider = Hotel::select('id', 'title', 'image', 'price', 'description', 'slug')->limit(3)->inRandomOrder()->get();
         $data=[
             'setting'=>$setting,
             'slider'=>$slider,
@@ -37,6 +37,14 @@ class HomeController extends Controller
 
     public function hotel($id, $slug)
     {
+        $data = Hotel::find($id);
+        print_r($data);
+        exit();
+    }
+
+    public function booknow($id)
+    {
+        echo "Book Now <br>";
         $data = Hotel::find($id);
         print_r($data);
         exit();
