@@ -4,7 +4,6 @@
         <ul class="slides">
             @foreach($slider as $rs)
             <li style="background-image: url({{Storage::url($rs->image)}}) ">
-{{--                url({{asset('assets')}}/images/slider1.jpg);--}}
                 <div class="container">
                     <div class="col-md-12 col-md-offset-0 text-center slider-text">
                         <div class="slider-text-inner js-fullheight">

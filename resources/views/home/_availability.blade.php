@@ -1,4 +1,3 @@
-
 <div class="row">
     <div id="availability">
         <form action="#">

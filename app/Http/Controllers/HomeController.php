@@ -42,6 +42,19 @@ class HomeController extends Controller
         exit();
     }
 
+    public function categoryhotels($id, $slug)
+    {
+        $datalist = Hotel::where('category_id', $id)->get();
+        $data = Category::find($id);
+        $slider = Hotel::select('id', 'title', 'image', 'price', 'description', 'slug')->limit(4)->get();
+        $sliderdata=[
+            'setting'=>$data,
+            'slider'=>$slider,
+            'page'=>'home'
+        ];
+        return view('home.category_hotels', ['data'=>$data, 'datalist'=>$datalist], $sliderdata);
+    }
+
     public function aboutus()
     {
         $setting = Setting::first();
@@ -92,17 +105,4 @@ class HomeController extends Controller
         $setting = Setting::first();
         return view('home.references', ['setting'=>$setting]);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

@@ -102,8 +102,6 @@
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-12">
-{{--                        <h3>Our Address</h3>--}}
-{{--                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>--}}
                         <ul class="contact-info">
                             <li><i class="ti-map"></i>{{$setting->address}}</li>
                             <li><i class="ti-mobile"></i>{{$setting->phone}}</li>
