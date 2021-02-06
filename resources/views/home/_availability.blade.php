@@ -1,17 +1,8 @@
 <div class="row">
     <div id="availability">
-        <form action="#">
-
-        <div class="a-col">
-            <section>
-                <select class="cs-select cs-skin-border">
-                    <option value="" disabled selected>Select Hotel</option>
-                    <option value="email">Luxe Hotel</option>
-                    <option value="twitter">Deluxe Hotel</option>
-                    <option value="linkedin">Five Star Hotel</option>
-                </select>
-            </section>
-        </div>
+        <form action="{{route('gethotel')}}" method="post">
+            @csrf
+            @livewire('search')
         <div class="a-col alternate">
             <div class="input-field">
                 <label for="date-start">Check In</label>
@@ -25,11 +16,13 @@
             </div>
         </div>
         <div class="a-col action">
-            <a href="#">
+            <a href="{{route('gethotel')}}">
+{{--                {{route('gethotel', ['id'=>$rs->id, 'slug'=> $rs->slug])}}--}}
                 <span>Check</span>
                 Availability
             </a>
         </div>
     </form>
+        @livewireScripts
     </div>
 </div>

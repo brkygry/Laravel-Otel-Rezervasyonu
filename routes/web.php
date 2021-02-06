@@ -35,6 +35,7 @@ Route::get('/references', [HomeController::class, 'references'])->name('referenc
 Route::get('/blank', [HomeController::class, 'blank'])->name('blank');
 Route::get('hotel/{id}/{slug}', [HomeController::class, 'hotels'])->name('hotel');
 Route::get('booknow/{id}', [HomeController::class, 'booknow'])->whereNumber('id')->name('booknow');
+Route::get('/gethotel', [HomeController::class,'gethotel'])->name('gethotel');
 
 
 

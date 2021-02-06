@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Hotel;
+use App\Models\Image;
 use App\Models\Message;
 use App\Models\Setting;
 use Illuminate\Http\Request;
@@ -32,14 +33,20 @@ class HomeController extends Controller
             'slider'=>$slider,
             'page'=>'home'
         ];
-        return view('home.index', ['setting'=>$setting], $data);
+        $availability = Hotel::select('id', 'title', 'image', 'price', 'description', 'slug')->get();
+        $adata=[
+            'setting'=>$setting,
+            'availability'=>$availability,
+            'page'=>'home'
+        ];
+        return view('home.index', ['setting'=>$setting], $data, $adata);
     }
 
     public function hotel($id, $slug)
     {
         $data = Hotel::find($id);
-        print_r($data);
-        exit();
+        $datalist = Image::where('hotel_id', $id)->get();
+        return view('home.hotel_detail', ['data'=>$data, 'datalist'=>$datalist]);
     }
 
     public function booknow($id)
@@ -112,5 +119,11 @@ class HomeController extends Controller
     {
         $setting = Setting::first();
         return view('home.references', ['setting'=>$setting]);
+    }
+
+    public function gethotel(Request $request)
+    {
+        $data = Hotel::where('title', $request->input('search'))->first();
+        return redirect()->route('hotel', ['id'=>$data->id, 'slug'=>$data->slug]);
     }
 }
