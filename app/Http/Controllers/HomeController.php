@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\faq;
 use App\Models\Hotel;
 use App\Models\Image;
 use App\Models\Message;
@@ -74,6 +75,12 @@ class HomeController extends Controller
     {
         $setting = Setting::first();
         return view('home.about', ['setting'=>$setting]);
+    }
+
+    public function faq()
+    {
+        $datalist = faq::all()->sortBy('position');
+        return view('home.faq', ['datalist'=>$datalist]);
     }
 
     public function services()

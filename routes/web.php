@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\HotelController;
 use App\Http\Controllers\Admin\ImageController;
 use App\Http\Controllers\Admin\MessageController;
@@ -27,6 +28,7 @@ Route::redirect('/home', '/');
 Route::get('/', [HomeController::class, 'index'])->name('home_home');
 Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendmessage');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/hotels', [HomeController::class, 'hotels'])->name('hotels');
@@ -88,6 +90,17 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::get('/delete/{id}',[MessageController::class, 'destroy'])->name('admin_message_delete');
         Route::get('/show',[MessageController::class, 'show'])->name('admin_message_show');
     });
+
+    #Faq
+    Route::prefix('faq')->group(function () {
+        Route::get('/', [FaqController::class, 'index'])->name('admin_faq');
+        Route::get('/create', [FaqController::class, 'create'])->name('admin_faq_add');
+        Route::post('/store', [FaqController::class, 'store'])->name('admin_faq_store');
+        Route::get('/edit/{id}', [FaqController::class, 'edit'])->name('admin_faq_edit');
+        Route::post('/update/{id}', [FaqController::class, 'update'])->name('admin_faq_update');
+        Route::get('/delete/{id}', [FaqController::class, 'destroy'])->name('admin_faq_delete');
+        Route::get('/show', [FaqController::class, 'show'])->name('admin_faq_show' );
+    });
 });
 
 Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function (){
@@ -101,3 +114,5 @@ Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(fu
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+

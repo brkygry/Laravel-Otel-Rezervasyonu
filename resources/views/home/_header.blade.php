@@ -28,6 +28,7 @@
                                 <li><a href="{{route('aboutus')}}">About Us</a></li>
                                 <li><a href="{{route('references')}}">References</a></li>
                                 <li><a href="{{route('contact')}}">Contact</a></li>
+                                <li><a href="{{route('faq')}}">FAQ</a></li>
                                 @guest
                                 <li><a href="/login">Login</a></li>
                                 <li><a href="/register">Register</a></li>
