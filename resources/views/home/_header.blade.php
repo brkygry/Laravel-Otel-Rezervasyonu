@@ -48,6 +48,12 @@
                                         </li>
                                         <li> <a href="{{route('myprofile')}}">My Profile</a> </li>
                                         <li> <a href="{{route('mybookings')}}">My Bookings</a> </li>
+                                        @php
+                                            $userRoles = Auth::user()->roles->pluck('name');
+                                        @endphp
+                                        @if($userRoles->contains('admin'))
+                                            <li><a href="{{route('admin_home')}}" target="_blank">Admin Panel</a></li>
+                                        @endif
                                         <li class="logout"> <a href="{{route('admin_log_out')}}">Logout</a></li>
                                     </ul>
                                 </li>

@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="Üye rezervasyon yapabiliyor.&#10;User panelde bazı görsel hatalar mevcut.&#10;(Hotel detail sayfasındaki görsel hatalar giderildi.)">
+    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="Rezervasyonlar admin panelde yönetilebilir hale getirildi.">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/c2937198-481f-4c1f-956f-77128dbf88e3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c2937198-481f-4c1f-956f-77128dbf88e3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_category.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_hotel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_hotel.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/image_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/image_add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/user_reservation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_reservation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <list id="1dd81cb0-845e-406e-9c61-eed8e46508da" name="Website template uyarlaması" comment="" />
@@ -241,7 +239,7 @@
       <workItem from="1612877969375" duration="16473000" />
       <workItem from="1612966898800" duration="40760000" />
       <workItem from="1613033919473" duration="1609000" />
-      <workItem from="1613036287598" duration="8541000" />
+      <workItem from="1613036287598" duration="12258000" />
     </task>
     <task id="LOCAL-00001" summary="Website template uyarlaması">
       <created>1609882423158</created>
@@ -439,7 +437,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613010124417</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Rezervasyonlar admin panelde yönetilebilir hale getirildi.">
+      <created>1613048058154</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1613048058154</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,7 +463,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Admin Panel Template Uyarlandı" />
     <MESSAGE value="Admin Panele Login yapılabiliyor ve Logout butonu çalışır hale getirildi." />
     <MESSAGE value="Category tablosu eklendi, Admin Panel'de veriler listelendi." />
     <MESSAGE value="Category tablosuna admin panel üzerinden veri eklenip silinebilir." />
@@ -483,7 +487,8 @@
     <MESSAGE value="Sıkça Sorulan Sorular eklendi. Admin panelde yönetilebilir hale getirildi." />
     <MESSAGE value="Hotel detail sayfası eklendi.&#10;-Sayfa düzeninde bazı hatalar mevcut." />
     <MESSAGE value="Üye rezervasyon yapabiliyor.&#10;User panelde bazı görsel hatalar mevcut.&#10;(Hotel detail sayfasındaki görsel hatalar giderildi.)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Üye rezervasyon yapabiliyor.&#10;User panelde bazı görsel hatalar mevcut.&#10;(Hotel detail sayfasındaki görsel hatalar giderildi.)" />
+    <MESSAGE value="Rezervasyonlar admin panelde yönetilebilir hale getirildi." />
+    <option name="LAST_COMMIT_MESSAGE" value="Rezervasyonlar admin panelde yönetilebilir hale getirildi." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

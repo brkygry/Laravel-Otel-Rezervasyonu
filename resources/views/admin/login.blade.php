@@ -44,6 +44,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <h2 class="main-title-w3layouts mb-2 text-center text-white">Login</h2>
         <!--// main-heading -->
         <div class="form-body-w3-agile text-center w-lg-50 w-sm-75 w-100 mx-auto mt-5">
+            @include('home.message')
             <form action="{{route('admin_login_check')}}" method="post">
                 @csrf
                 <div class="form-group">
