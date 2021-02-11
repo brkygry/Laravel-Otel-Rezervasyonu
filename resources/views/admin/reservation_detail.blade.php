@@ -28,7 +28,7 @@
                     </div>
                 </div>
             </section>
-
+            @include('home.message')
             <section class="content">
                 <div class="card">
                         <!-- /.card-header -->
@@ -96,7 +96,7 @@
                                         <button type="submit" class="btn-primary">Update Reservation</button>
                                     </td>
                                 </form>
-
+                                    @include('home.message')
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead>
                                         <tr>

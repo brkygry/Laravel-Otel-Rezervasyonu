@@ -38,8 +38,7 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="dropdownMenu3" aria-haspopup="true"
                                        aria-expanded="false">
                                         <div class="profile_img">
-                                            <img src="{{ Auth::user()->image }}" class="img-circle" style="height: 50px" alt="img" />
-{{--                                            {{asset('assets')}}/admin/assets/images/profileimg.png--}}
+                                            <img src="{{Storage::url(Auth::user()->profile_photo_path)}}" class="img-circle" style="height: 50px" alt="img" />
                                         </div>
                                     </a>
                                     <ul class="fh5co-sub-menu">

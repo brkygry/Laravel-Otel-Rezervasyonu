@@ -23,7 +23,11 @@
                                     </div>
                                 </li>
                                 <li><a href="#" class="grid">
-                                        <div class="user_img"><img src="{{asset('assets')}}/admin/assets/images/avatar1.jpg" alt=""></div>
+                                        <div class="user_img">
+                                            @if (Auth::user()->profile_photo_path)
+                                            <img src="{{ Storage::url(Auth::user()->profile_photo_path) }}" alt="User Image">
+                                            @endif
+                                        </div>
                                         <div class="notification_desc">
                                             <p>Johnson purchased template</p>
                                             <span>Just Now</span>
@@ -102,7 +106,9 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="dropdownMenu3" aria-haspopup="true"
                                aria-expanded="false">
                                 <div class="profile_img">
-                                    <img src="{{asset('assets')}}/admin/assets/images/profileimg.jpg" class="rounded-circle" alt="" />
+                                    @if (Auth::user()->profile_photo_path)
+                                        <img src="{{ Storage::url(Auth::user()->profile_photo_path) }}" alt="User Image">
+                                    @endif
                                     <div class="user-active">
                                         <span></span>
                                     </div>
