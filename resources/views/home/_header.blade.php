@@ -15,7 +15,7 @@
                                     <ul class="fh5co-sub-menu">
                                         @foreach($parentCategories as $rs)
                                             <li>
-                                                <a href="#" class="fh5co-sub-ddown">{{$rs->title}}</a>
+                                                <a href="{{route('categoryhotels', ['id'=>$rs->id, 'slug'=>$rs->title])}}" class="fh5co-sub-ddown">{{$rs->title}}</a>
                                                     @if(count($rs->children))
                                                         @include('home.categorytree', ['children'=> $rs->children])
                                                     @endif
@@ -24,7 +24,6 @@
                                     </ul>
                                 </li>
                                 <li><a href="{{route('hotels')}}">Hotels</a></li>
-                                <li><a href="{{route('services')}}">Services</a></li>
                                 <li><a href="{{route('aboutus')}}">About Us</a></li>
                                 <li><a href="{{route('references')}}">References</a></li>
                                 <li><a href="{{route('contact')}}">Contact</a></li>
@@ -39,7 +38,8 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="dropdownMenu3" aria-haspopup="true"
                                        aria-expanded="false">
                                         <div class="profile_img">
-                                            <img src="{{asset('assets')}}/admin/assets/images/profileimg.png" class="img-circle" style="height: 50px" alt="img" />
+                                            <img src="{{ Auth::user()->image }}" class="img-circle" style="height: 50px" alt="img" />
+{{--                                            {{asset('assets')}}/admin/assets/images/profileimg.png--}}
                                         </div>
                                     </a>
                                     <ul class="fh5co-sub-menu">
@@ -47,7 +47,6 @@
                                             <h9 class="user-name">{{ Auth::user()->name }}</h9>
                                         </li>
                                         <li> <a href="{{route('myprofile')}}">My Profile</a> </li>
-                                        <li> <a href="{{route('admin_setting')}}">Setting</a> </li>
                                         <li class="logout"> <a href="{{route('admin_log_out')}}">Logout</a></li>
                                     </ul>
                                 </li>

@@ -18,7 +18,7 @@
                         <div class="hotel-content">
                             <div class="hotel-grid" style="background-image: url({{Storage::url($rs->image)}})">
                                 <div class="price"><small>For as low as</small><span>{{$rs->price}}</span></div>
-                                <a class="book-now text-center" href="{{route('hotel', ['id'=>$rs->id, 'slug'=> $rs->slug])}}"><i class="ti-calendar"></i> Book Now</a>
+                                <a class="book-now text-center" href="{{route('hotel', ['id'=>$rs->id, 'slug'=> $rs->slug])}}">View</a>
                             </div>
                             <div class="desc">
                                 <h3><a href="{{route('hotel', ['id'=>$rs->id, 'slug'=> $rs->slug])}}">{{$rs->title}}</a></h3>

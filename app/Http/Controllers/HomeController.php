@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Livewire\Review;
 use App\Models\Category;
 use App\Models\faq;
 use App\Models\Hotel;
@@ -43,19 +44,23 @@ class HomeController extends Controller
         return view('home.index', ['setting'=>$setting], $data, $adata);
     }
 
+    public function comments($id){
+        $reviews = Review::where('hotel_id', $id)->get();
+        return view('home.comment', ['reviews'=>$reviews]);
+    }
+
     public function hotel($id, $slug)
     {
         $data = Hotel::find($id);
         $datalist = Image::where('hotel_id', $id)->get();
-        return view('home.hotel_detail', ['data'=>$data, 'datalist'=>$datalist]);
+//        $reviews = Review::where('hotel_id', $id)->get(); 'reviews'=>$reviews
+        return view('home.hotel_detail', ['data'=>$data, 'datalist'=>$datalist ]);
     }
 
     public function booknow($id)
     {
         echo "Book Now <br>";
         $data = Hotel::find($id);
-        print_r($data);
-        exit();
     }
 
     public function categoryhotels($id, $slug)
@@ -68,7 +73,7 @@ class HomeController extends Controller
             'slider'=>$slider,
             'page'=>'home'
         ];
-        return view('home.category_hotels', ['data'=>$data, 'datalist'=>$datalist], $sliderdata);
+            return view('home.category_hotels', ['data'=>$data, 'datalist'=>$datalist], $sliderdata);
     }
 
     public function aboutus()
@@ -131,6 +136,6 @@ class HomeController extends Controller
     public function gethotel(Request $request)
     {
         $data = Hotel::where('title', $request->input('search'))->first();
-        return redirect()->route('hotel', ['id'=>$data->id, 'slug'=>$data->slug]);
+        return redirect()->route('user_reservation_add', ['id'=>$data->id]);
     }
 }

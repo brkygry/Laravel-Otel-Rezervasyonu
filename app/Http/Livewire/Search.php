@@ -14,4 +14,10 @@ class Search extends Component
         $datalist = Hotel::where('title', 'like', '%'.$this->search.'%')->get();
         return view('livewire.search', ['datalist'=> $datalist, 'query'=>$this->search]);
     }
+
+    public function getHotelAttribute()
+    {
+        $data = Hotel::where('id', $this->id)-get();
+        return $data;
+    }
 }

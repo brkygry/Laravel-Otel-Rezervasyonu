@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="Sıkça Sorulan Sorular eklendi. Admin panelde yönetilebilir hale getirildi.">
+    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="Hotel detail sayfası eklendi.&#10;-Sayfa düzeninde bazı hatalar mevcut.">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c2937198-481f-4c1f-956f-77128dbf88e3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c2937198-481f-4c1f-956f-77128dbf88e3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Search.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Hotel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Hotel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/slideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/slideshow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_aside.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_availability.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_availability.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/_featuredhotels.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_featuredhotels.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/categorytree.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/categorytree.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/hotel_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/hotel_detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/hotelbook.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/hotelbook.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/search.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <list id="1dd81cb0-845e-406e-9c61-eed8e46508da" name="Website template uyarlaması" comment="" />
@@ -165,15 +180,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/home" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\brkyg\Desktop\php-odev\phplaravelodev\resources\views\admin" />
       <recent name="C:\Users\brkyg\Desktop\php-odev\phplaravelodev\resources\views\home" />
+      <recent name="C:\Users\brkyg\Desktop\php-odev\phplaravelodev\resources\views\admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -232,7 +247,9 @@
       <workItem from="1612713617831" duration="3421000" />
       <workItem from="1612741648131" duration="5759000" />
       <workItem from="1612798010637" duration="663000" />
-      <workItem from="1612807305711" duration="8087000" />
+      <workItem from="1612807305711" duration="8155000" />
+      <workItem from="1612877969375" duration="16473000" />
+      <workItem from="1612966898800" duration="40079000" />
     </task>
     <task id="LOCAL-00001" summary="Website template uyarlaması">
       <created>1609882423158</created>
@@ -416,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612746344182</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Hotel detail sayfası eklendi.&#10;-Sayfa düzeninde bazı hatalar mevcut.">
+      <created>1612816444101</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1612816444101</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,7 +459,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Website template uyarlaması" />
     <MESSAGE value="Website template uyarlandı" />
     <MESSAGE value="Admin Panel Template Uyarlandı" />
     <MESSAGE value="Admin Panele Login yapılabiliyor ve Logout butonu çalışır hale getirildi." />
@@ -460,7 +483,8 @@
     <MESSAGE value="Oteller anasayfaya eklendi." />
     <MESSAGE value="Jetstream livewire tabanlı search alanı eklendi." />
     <MESSAGE value="Sıkça Sorulan Sorular eklendi. Admin panelde yönetilebilir hale getirildi." />
-    <option name="LAST_COMMIT_MESSAGE" value="Sıkça Sorulan Sorular eklendi. Admin panelde yönetilebilir hale getirildi." />
+    <MESSAGE value="Hotel detail sayfası eklendi.&#10;-Sayfa düzeninde bazı hatalar mevcut." />
+    <option name="LAST_COMMIT_MESSAGE" value="Hotel detail sayfası eklendi.&#10;-Sayfa düzeninde bazı hatalar mevcut." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

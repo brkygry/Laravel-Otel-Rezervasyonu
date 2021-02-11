@@ -20,7 +20,7 @@
                 <div class="desc">
                     <h3>{{$rs->title}}</h3>
                     <p>{{$rs->description}}</p>
-                    <p><a href="{{route('hotel', ['id'=>$rs->id, 'slug'=> $rs->slug])}}"         class="btn btn-primary btn-luxe-primary">Book Now<i class="ti-angle-right"></i></a></p>
+                    <p><a href="{{route('hotel', ['id'=>$rs->id, 'slug'=> $rs->slug])}}" class="btn btn-primary btn-luxe-primary">View<i class="ti-angle-right"></i></a></p>
                 </div>
             </div>
             @endforeach

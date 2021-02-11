@@ -97,29 +97,23 @@
         </div>
         <br>
         <br>
+        <div >
         <div class="slideshow-container">
             <div class="row">
                 <div class="col-md-6">
                     <!-- Full-width images with number and caption text -->
-                    <div class="mySlides fade">
-                        <img src="{{Storage::url($data->image)}}" style="width:100%">
-                    </div>
                     @foreach($datalist as $rs)
-                    <div class="mySlides fade">
-                        <img src="{{Storage::url($rs->image)}}" style="width:100%">
+                    <div class="flex-slider">
+                        <img class="mySlides" src="{{Storage::url($rs->image)}}" style="width:100%">
                     </div>
                     @endforeach
-
-                    <!-- Next and previous buttons -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <br>
                 </div>
 
                 <div class="col-md-6">
                     <hr>
                     <h1>{{$data->title}}</h1>
                     <hr>
-                    <br>
                     <h3>Açıklama</h3>
                     {{$data->description}}
                     <br>
@@ -132,38 +126,16 @@
                             <li><i class="ti-envelope"></i><a href="#">{{$data->email}}</a></li>
                         </ul>
                     </div>
-                            <a href="#" type="submit" class="btn btn-primary btn-style mt-4">Reservation</a>
+                        <a href="{{route('user_reservation_add', ['id'=> $data->id])}}" type="submit" class="btn btn-primary btn-style mt-4">Reservation</a>
                 </div>
-                <br>
-                <br>
                 <div class="col-md-12">
-                    <div class="tab-pane">
-                        <ul class="tabs-nav">
-                            <li><a data-toggle="tab" href="#tab1">Details</a></li>
-                            <li><a data-toggle="tab" href="#tab2">Reviews</a></li>
-                        </ul>
-                    </div>
-                    <div class="tab-content">
-                        <div id="tab1" class="tab-pane active">
+                    <h3>Details</h3>
+                        <div>
                             <p>{!! $data->detail !!}</p>
                         </div>
-
-                        <div id="tab2" class="tab-pane">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <input type="submit" value="Send Message" class="btn btn-primary">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
             </div>
+        </div>
         </div>
 
 
