@@ -23,22 +23,22 @@
         <!-- //logo end -->
 
         <div class="sidebar-menu-inner">
-
             <!-- sidebar nav start -->
             <ul class="nav nav-pills nav-stacked custom-nav">
-{{--                <li class="active"><a href="index.html"><i class="fa fa-tachometer"></i><span> Dashboard</span></a>--}}
-{{--                </li>--}}
-{{--                <li class="menu-list">--}}
-{{--                    <a href="#"><i class="fa fa-cogs"></i>--}}
-{{--                        <span>Elements <i class="lnr lnr-chevron-right"></i></span></a>--}}
-{{--                    <ul class="sub-menu-list">--}}
-{{--                        <li><a href="carousels.html">Carousels</a> </li>--}}
-{{--                        <li><a href="cards.html">Default cards</a> </li>--}}
-{{--                        <li><a href="people.html">People cards</a></li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
+
                 <li><a href="{{route('admin_category')}}"><i class="fa fa-th"></i> <span>Category</span></a></li>
                 <li><a href="{{route('admin_hotels')}}"><i class="fa fa-university"></i> <span>Hotels</span></a></li>
+                <li class="menu-list">
+                    <a href="#"><i class="fa fa-book"></i>
+                        <span>Reservations<i class="fa fa-book"></i></span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="{{route('admin_reservations')}}">All Reservations</a> </li>
+                        <li><a href="{{route('admin_reservation_list', ['status'=>'new'])}}">New Reservations</a> </li>
+                        <li><a href="{{route('admin_reservation_list', ['status'=>'accepted'])}}">Accepted Reservations</a> </li>
+                        <li><a href="{{route('admin_reservation_list', ['status'=>'completed'])}}">Completed Reservations</a></li>
+                        <li><a href="{{route('admin_reservation_list', ['status'=>'canceled'])}}">Canceled Reservations</a></li>
+                    </ul>
+                </li>
                 <li><a href="{{route('admin_setting')}}"><i class="fa fa-wrench"></i> <span>Settings</span></a></li>
                 <li><a href="{{route('admin_message')}}"><i class="fa fa-envelope-o"></i> <span>Contact</span></a></li>
                 <li><a href="{{route('admin_faq')}}"><i class="fa fa-question"></i> <span>FAQ</span></a></li>

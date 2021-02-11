@@ -47,6 +47,7 @@
                                             <h9 class="user-name">{{ Auth::user()->name }}</h9>
                                         </li>
                                         <li> <a href="{{route('myprofile')}}">My Profile</a> </li>
+                                        <li> <a href="{{route('mybookings')}}">My Bookings</a> </li>
                                         <li class="logout"> <a href="{{route('admin_log_out')}}">Logout</a></li>
                                     </ul>
                                 </li>

@@ -112,6 +112,7 @@
                                                                     <td>{{ $rs -> email }}</td>
                                                                     <td>{{ $rs -> phone }}</td>
                                                                     <td>{{ $rs -> total }}</td>
+                                                                    <td>{{ $rs -> image }}</td>
                                                                     <td>{{ $rs -> status }}</td>
                                                                     <td><a href="{{route('user_reservation_show', ['id'=> $rs->id])}}" onclick)"><img src="{{asset('assets/admin/images')}}/edit.png" height="25"></a></td>
                                                                 </tr>

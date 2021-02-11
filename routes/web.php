@@ -43,6 +43,7 @@ Route::post('/gethotel', [HomeController::class,'gethotel'])->name('gethotel');
 
 
 Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
+
     #Reservation
     Route::prefix('reservation')->group(function (){
         Route::get('/',[ReservationController::class, 'index'])->name('user_reservations');
@@ -83,6 +84,7 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::get('/delete/{id}',[HotelController::class, 'destroy'])->name('admin_hotel_delete');
         Route::get('/show',[HotelController::class, 'show'])->name('admin_hotel_show');
     });
+
     #Product Image Gallery
     Route::prefix('image')->group(function (){
         Route::get('/create/{hotel_id}',[ImageController::class, 'create'])->name('admin_image_add');
@@ -90,6 +92,7 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::get('/delete/{id}/{hotel_id}',[ImageController::class, 'destroy'])->name('admin_image_delete');
         Route::get('/show',[ImageController::class, 'show'])->name('admin_image_show');
     });
+
     #Setting
     Route::get('setting', [SettingController::class, 'index'])->name('admin_setting');
     Route::post('setting/update',[SettingController::class, 'update'])->name('admin_setting_update');
@@ -112,6 +115,19 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::post('/update/{id}', [FaqController::class, 'update'])->name('admin_faq_update');
         Route::get('/delete/{id}', [FaqController::class, 'destroy'])->name('admin_faq_delete');
         Route::get('/show', [FaqController::class, 'show'])->name('admin_faq_show' );
+    });
+
+    #Admin Reservation
+    Route::prefix('reservation')->group(function (){
+        Route::get('/',[\App\Http\Controllers\Admin\ReservationController::class, 'index'])->name('admin_reservations');
+        Route::get('/list/{status}',[\App\Http\Controllers\Admin\ReservationController::class, 'list'])->name('admin_reservation_list');
+        Route::get('/create/{id}',[\App\Http\Controllers\Admin\ReservationController::class, 'create'])->name('admin_reservation_add');
+        Route::post('/store',[\App\Http\Controllers\Admin\ReservationController::class, 'store'])->name('admin_reservation_store');
+        Route::get('/edit/{id}',[\App\Http\Controllers\Admin\ReservationController::class, 'edit'])->name('admin_reservation_edit');
+        Route::post('/update/{id}',[\App\Http\Controllers\Admin\ReservationController::class, 'update'])->name('admin_reservation_update');
+        Route::post('/detail/update/{id}',[\App\Http\Controllers\Admin\ReservationController::class, 'detailupdate'])->name('admin_reservation_detail_update');
+        Route::get('/delete/{id}',[\App\Http\Controllers\Admin\ReservationController::class, 'destroy'])->name('admin_reservation_delete');
+        Route::get('/show/{id}',[\App\Http\Controllers\Admin\ReservationController::class, 'show'])->name('admin_reservation_show');
     });
 });
 

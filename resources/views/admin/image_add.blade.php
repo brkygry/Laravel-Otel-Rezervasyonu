@@ -54,17 +54,7 @@
                                         <label>Image</label>
                                         <input type="file" name="image" class="form-control">
                                     </div>
-{{--                                    <div class="custom-file">--}}
-{{--                                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>--}}
-{{--                                        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>--}}
-{{--                                        <div class="invalid-feedback">Example invalid custom file feedback</div>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="form-check check-remember check-me-out">--}}
-{{--                                        <input class="form-check-input checkbox" type="checkbox" id="gridCheck">--}}
-{{--                                        <label class="form-check-label checkmark" for="gridCheck">--}}
-{{--                                            Check me out--}}
-{{--                                        </label>--}}
-{{--                                    </div>--}}
+
                                     <button type="submit" class="btn btn-primary btn-style mt-4">Add Image</button>
                                 </form>
                                 <table id="example1" class="table table-bordered table-striped">

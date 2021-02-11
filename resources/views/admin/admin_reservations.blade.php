@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Hotels')
+@section('title', 'Reservations')
 
 @section('body')
  <div class="main-content">
@@ -9,12 +9,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h3>Admin Hotel Page</h3>
+                        <h3>Admin Reservations Page</h3>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Admin Hotel Page</li>
+                            <li class="breadcrumb-item active">Admin Reservations Page</li>
                         </ol>
                     </div>
                 </div>
@@ -24,59 +24,42 @@
         <section class="content">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Hotels</h3>
+                    <h3 class="card-title">Reservations</h3>
                 </div>
 
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Hotel List</h3>
+                        <h3 class="card-title">Reservation List</h3>
                     </div>
 
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <a href="{{route('admin_hotel_add')}}" type="submit" class="btn btn-primary btn-style mt-4">Add Hotel</a>
-                        <br>
-                        <br>
-
-                        <table id="example1" class="table table-bordered table-striped">
+                            <table id="example1" class="table table-bordered table-striped">
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Category</th>
-                                <th>Title</th>
-                                <th>Price</th>
-                                <th>Image</th>
+                                <th>User</th>
+                                <th>Name</th>
                                 <th>Phone</th>
-                                <th>Fax</th>
                                 <th>Email</th>
+                                <th>Total</th>
+                                <th>Date</th>
                                 <th>Status</th>
                                 <th style="..." colspan="3">Actions</th>
-
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($datalist as  $rs)
                             <tr>
                                 <td>{{ $rs -> id }}</td>
-                                <td>
-                                    {{\App\Http\Controllers\Admin\CategoryController::getParentsTree($rs->category, $rs->category->title)}}
-                                </td>
-                                <td>{{ $rs -> title }}</td>
-                                <td>{{ $rs -> price }}</td>
-                                <td>
-                                    @if($rs->image)
-                                        <img src="{{Storage::url($rs->image)}}" height="40" alt="">
-                                    @endif
-                                </td>
+                                <td>{{ $rs -> user->name }}</td>
+                                <td>{{ $rs -> name }}</td>
                                 <td>{{ $rs -> phone }}</td>
-                                <td>{{ $rs -> fax }}</td>
                                 <td>{{ $rs -> email }}</td>
+                                <td>{{ $rs -> total }}</td>
+                                <td>{{ $rs -> created_at }}</td>
                                 <td>{{ $rs -> status }}</td>
-                                <td><a href="{{route('admin_hotel_edit', ['id'=> $rs->id])}}"><img src="{{asset('assets/admin/images')}}/edit.png" height="25"></a></td>
-                                <td><a href="{{route('admin_image_add', ['hotel_id'=>$rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100, widht=1100 height=700')">
-                                        <img src="{{asset('assets/admin/images')}}/image-gallery.png" height="25"></a>
-                                </td>
-                                <td><a href="{{route('admin_hotel_delete', ['id'=> $rs->id])}}"onclick="return confirm('Are you sure? You want to delete this record')"><img src="{{asset('assets/admin/images')}}/delete.png" height="25"></a></td>
+                                <td><a href="{{route('admin_reservation_show', ['id'=> $rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100, widht=1000 height=800')">><img src="{{asset('assets/admin/images')}}/edit.png" height="25"></a></td>
                             </tr>
                             @endforeach
                          </table>
