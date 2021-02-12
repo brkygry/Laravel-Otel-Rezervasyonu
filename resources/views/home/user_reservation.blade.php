@@ -1,11 +1,6 @@
 @php
     $setting = \App\Http\Controllers\HomeController::getSetting();
 @endphp
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -50,18 +45,19 @@
     <![endif]-->
 
 </head>
-<body>
 <div id="fh5co-wrapper">
     <div id="fh5co-page">
         <div id="fh5co-header">
             @include('home._header')
         </div>
         <!-- end:fh5co-header -->
-        <div class="fh5co-parallax" style="background-image: url({{asset('assets')}}/images/slider1.jpg);" data-stellar-background-ratio="0.5">
+        <div class="fh5co-parallax" style="background-image: url({{asset('assets')}}/images/slider1.jpg);"
+             data-stellar-background-ratio="0.5">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
+                    <div
+                        class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
                         <div class="fh5co-intro fh5co-table-cell">
                             <h1 class="text-center">My Bookings</h1>
                         </div>
@@ -76,58 +72,60 @@
             <div class="container">
                 <!-- Row -->
                 <div class="row">
-                    <div id="aside" class="col-md-1">
+                    <div id="aside" class="col-md-2">
                         @include('home.usermenu')
                     </div>
-                    <div id="main" class="col-md-11">
-                        <div id="fh5co-wrapper">
-                            <div id="fh5co-page">
-                                <div id="fh5co-services-section">
-                                    <div class="container">
-                                        <div class="row">
-                                            <section class="content">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h3 class="card-title">My Bookings</h3>
-                                                    </div>
-                                                    <div class= "card-body">
-                                                        <table id="example1" class="table table-bordered table-striped">
-                                                            <thead>
-                                                            <tr>
-                                                                <th>ID</th>
-                                                                <th>Name</th>
-                                                                <th>Email</th>
-                                                                <th>Phone</th>
-                                                                <th>Total</th>
-                                                                <th>Image</th>
-                                                                <th>Status</th>
-                                                                <th style="..." colspan="1">Actions</th>
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            @foreach($datalist as  $rs)
-                                                                <tr>
-                                                                    <td>{{ $rs -> id }}</td>
-                                                                    <td>{{ $rs -> name }}</td>
-                                                                    <td>{{ $rs -> email }}</td>
-                                                                    <td>{{ $rs -> phone }}</td>
-                                                                    <td>{{ $rs -> total }}</td>
-                                                                    <td>{{ $rs -> image }}</td>
-                                                                    <td>{{ $rs -> status }}</td>
-                                                                    <td><a href="{{route('user_reservation_show', ['id'=> $rs->id])}}" onclick)"><img src="{{asset('assets/admin/images')}}/edit.png" height="25"></a></td>
-                                                                </tr>
-                                                            @endforeach
-                                                        </table>
-                                                    </div>
-                                                    <!-- /.card-body -->
-                                                </div>
-                                                <!-- /.card -->
-                                            </section>
+                    <div id="main" class="col-md-10">
+                        <div class="container">
+                            <div class="row">
+                                <section class="content">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <table id="example1" class="table table-bordered table-striped">
+                                                <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Name</th>
+                                                    <th>Email</th>
+                                                    <th>Phone</th>
+                                                    <th>Total</th>
+                                                    <th>Check-in Date</th>
+                                                    <th>Check-out Date</th>
+                                                    <th>Reservation Time</th>
+                                                    <th>Status</th>
+                                                    <th>Updated At</th>
+                                                    <th style="..." colspan="1">Actions</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                @foreach($datalist as  $rs)
+                                                    <tr>
+                                                        <td>{{ $rs -> id }}</td>
+                                                        <td>{{ $rs -> name }}</td>
+                                                        <td>{{ $rs -> email }}</td>
+                                                        <td>{{ $rs -> phone }}</td>
+                                                        <td>₺{{ $rs -> total }}</td>
+                                                        <td>{{ $rs -> check_in }}</td>
+                                                        <td>{{ $rs -> check_out }}</td>
+                                                        <td>{{ $rs -> created_at }}</td>
+                                                        <td>{{ $rs -> status }}</td>
+                                                        <td>{{ $rs -> updated_at }}</td>
+                                                        <td>
+                                                            <a href="{{route('user_reservation_show', ['created_at'=> $rs->created_at])}}"
+                                                               onclick="return !window.open(this.href,'','top=50 left=100, widht=600 height=600')">
+                                                                <img src="{{asset('assets/admin/images')}}/view.png"
+                                                                     height="25">
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                            </table>
                                         </div>
+                                        <!-- /.card-body -->
                                     </div>
-                                </div>
+                                    <!-- /.card -->
+                                </section>
                             </div>
-                            <!-- END fh5co-page -->
                         </div>
                     </div>
                 </div>
@@ -137,7 +135,6 @@
         </div>
         <!-- END Section -->
         @include('home._footer')
-
     </div>
     <!-- END fh5co-page -->
 </div>
@@ -168,5 +165,3 @@
 
 <script src="{{asset('assets')}}/js/custom.js"></script>
 
-</body>
-</html>

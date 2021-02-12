@@ -19,6 +19,7 @@ class ReservationController extends Controller
      */
     public function index()
     {
+
         $datalist = Reservation::where('user_id', Auth::id())->get();
 
         return view('home.user_reservation', ['datalist'=>$datalist]);
@@ -29,10 +30,13 @@ class ReservationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($id)
+    public function create(Request $request)
     {
-        $data = Hotel::find($id);
-        return view('home.reservation_add', ['data'=>$data]);
+        $data = Hotel::where('title', $request->input('search'))->first();
+        $checkin = $request->input('checkin');
+        $checkout = $request->input('checkout');
+        $person = $request->input('person');
+        return view('home.reservation_add', ['data'=>$data, 'checkin'=>$checkin, 'checkout'=>$checkout, 'person'=>$person]);
     }
 
     /**
@@ -58,6 +62,8 @@ class ReservationController extends Controller
         $data->status = "New";
         $data->IP = $_SERVER['REMOTE_ADDR'];
 
+        $person = $request->input('person');
+
         $data->save();
 
         $datalist = Hotel::where('id', $data->hotel_id)->get();
@@ -69,8 +75,8 @@ class ReservationController extends Controller
             $data2->title = $rs->title;
             $data2->description = $rs->description;
             $data2->image = $rs->image;
-            $data2->price = $rs->price;
-            $data2->amount = 1;
+            $data2->price = $data->total;
+            $data2->amount = $person;
             $data2->status = $data->status;
             $data2->save();
         }
@@ -83,11 +89,10 @@ class ReservationController extends Controller
      * @param  \App\Models\Room  $room
      * @return \Illuminate\Http\Response
      */
-    public function show(Room $room, $id)
+    public function show(Room $room, $created_at)
     {
-        $datalist = Reservation::where('user_id', Auth::id())->where('hotel_id', $id)->get();
-
-        return view('home.user_reservation', ['datalist'=>$datalist]);
+        $datalist = Room::where('created_at', $created_at)->get();
+        return view('home.user_reservation_detail', ['datalist'=>$datalist]);
     }
 
     /**

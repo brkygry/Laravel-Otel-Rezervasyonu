@@ -81,6 +81,7 @@
                     </div>
                     <div id="main" class="col-md-10">
                         @include('profile.show')
+                        @include('profile.show')
                     </div>
                 </div>
                 <!-- END Row -->

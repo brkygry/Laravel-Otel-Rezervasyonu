@@ -38,7 +38,6 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>User</th>
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -52,14 +51,13 @@
                             @foreach($datalist as  $rs)
                             <tr>
                                 <td>{{ $rs -> id }}</td>
-                                <td>{{ $rs -> user->name }}</td>
                                 <td>{{ $rs -> name }}</td>
                                 <td>{{ $rs -> phone }}</td>
                                 <td>{{ $rs -> email }}</td>
                                 <td>{{ $rs -> total }}</td>
                                 <td>{{ $rs -> created_at }}</td>
                                 <td>{{ $rs -> status }}</td>
-                                <td><a href="{{route('admin_reservation_show', ['id'=> $rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100, widht=1000 height=800')">><img src="{{asset('assets/admin/images')}}/edit.png" height="25"></a></td>
+                                <td><a href="{{route('admin_reservation_show', ['id'=> $rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100, widht=1000 height=800')"><img src="{{asset('assets/admin/images')}}/edit.png" height="25"></a></td>
                             </tr>
                             @endforeach
                          </table>

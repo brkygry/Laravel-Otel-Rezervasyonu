@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Luxe &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-    <meta name="author" content="FREEHTML5.CO" />
+    <meta name="description" content="Free HTML5 Template by FREEHTML5.CO"/>
+    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive"/>
+    <meta name="author" content="FREEHTML5.CO"/>
 
     <!--
       //////////////////////////////////////////////////////
@@ -32,10 +36,10 @@
     <meta property="og:url" content=""/>
     <meta property="og:site_name" content=""/>
     <meta property="og:description" content=""/>
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:url" content="" />
-    <meta name="twitter:card" content="" />
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="favicon.ico">
@@ -71,7 +75,7 @@
     <!-- Modernizr JS -->
     <script src="{{asset('assets')}}/js/modernizr-2.6.2.min.js"></script>
     <!-- FOR IE9 below -->
-    <!--[if lt IE 9]>
+<!--[if lt IE 9]>
     <script src="{{asset('assets')}}/js/respond.min.js"></script>
     <![endif]-->
 
@@ -83,11 +87,13 @@
             @include('home._header')
         </div>
         <!-- end:fh5co-header -->
-        <div class="fh5co-parallax" style="background-image: url({{Storage::url($data->image)}})" data-stellar-background-ratio="0.5">
+        <div class="fh5co-parallax" style="background-image: url({{Storage::url($data->image)}})"
+             data-stellar-background-ratio="0.5">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
+                    <div
+                        class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
                         <div class="fh5co-intro fh5co-table-cell">
                             <h1 class="text-center">{{$data->title}}</h1>
                         </div>
@@ -97,45 +103,45 @@
         </div>
         <br>
         <br>
-        <div >
-        <div class="slideshow-container">
-            <div class="row">
-                <div class="col-md-6">
-                    <!-- Full-width images with number and caption text -->
-                    @foreach($datalist as $rs)
-                    <div class="flex-slider">
-                        <img class="mySlides" src="{{Storage::url($rs->image)}}" style="width:100%">
+        <div>
+            <div class="slideshow-container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Full-width images with number and caption text -->
+                        @foreach($datalist as $rs)
+                            <div class="flex-slider">
+                                <img class="mySlides" src="{{Storage::url($rs->image)}}" style="width:100%">
+                            </div>
+                        @endforeach
+                        <br>
                     </div>
-                    @endforeach
-                    <br>
-                </div>
 
-                <div class="col-md-6">
-                    <hr>
-                    <h1>{{$data->title}}</h1>
-                    <hr>
-                    <h3>Açıklama</h3>
-                    {{$data->description}}
-                    <br>
-                    <br>
-                    <h3>İletişim</h3>
-                    <div class="col-md-12">
-                        <ul class="contact-info">
-                            <li><i class="ti-map"></i>{{$data->address}}</li>
-                            <li><i class="ti-mobile"></i>{{$data->phone}}</li>
-                            <li><i class="ti-envelope"></i><a href="#">{{$data->email}}</a></li>
-                        </ul>
+                    <div class="col-md-6">
+                        <hr>
+                        <h1>{{$data->title}}</h1>
+                        <hr>
+                        <h3>Açıklama</h3>
+                        {{$data->description}}
+                        <br>
+                        <br>
+                        <h3>İletişim</h3>
+                        <div class="col-md-12">
+                            <ul class="contact-info">
+                                <li><i class="ti-map"></i>{{$data->address}}</li>
+                                <li><i class="ti-mobile"></i>{{$data->phone}}</li>
+                                <li><i class="ti-envelope"></i><a href="#">{{$data->email}}</a></li>
+                            </ul>
+                        </div>
                     </div>
-                        <a href="{{route('user_reservation_add', ['id'=> $data->id])}}" type="submit" class="btn btn-primary btn-style mt-4">Reservation</a>
-                </div>
-                <div class="col-md-12">
-                    <h3>Details</h3>
+                    <div class="col-md-12">
+                        <h3>Details</h3>
+                        <hr>
                         <div>
                             <p>{!! $data->detail !!}</p>
                         </div>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
 
 

@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="Kullanıcı rolleri eklendi.">
+    <list default="true" id="edbf7816-c270-4fbd-9b59-f75aa3fd74ac" name="Default Changelist" comment="Kullanıcı rolleri, admin panelde yönetilebiliyor.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/reservation_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/reservation_detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReservationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/admin/assets/images/profileimg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_hotel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_hotel.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin_reservations.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin_reservations.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_availability.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_availability.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/category_hotels.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/category_hotels.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/hotel_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/hotel_detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/hotelbook.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/hotelbook.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/references.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/references.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/reservation_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/reservation_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/user_reservation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_reservation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/search.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <list id="1dd81cb0-845e-406e-9c61-eed8e46508da" name="Website template uyarlaması" comment="" />
@@ -168,15 +183,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/home" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\brkyg\Desktop\php-odev\phplaravelodev\resources\views\admin" />
       <recent name="C:\Users\brkyg\Desktop\php-odev\phplaravelodev\resources\views\home" />
+      <recent name="C:\Users\brkyg\Desktop\php-odev\phplaravelodev\resources\views\admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -239,7 +254,7 @@
       <workItem from="1612877969375" duration="16473000" />
       <workItem from="1612966898800" duration="40760000" />
       <workItem from="1613033919473" duration="1609000" />
-      <workItem from="1613036287598" duration="23117000" />
+      <workItem from="1613036287598" duration="47843000" />
     </task>
     <task id="LOCAL-00001" summary="Website template uyarlaması">
       <created>1609882423158</created>
@@ -451,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613052021242</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Kullanıcı rolleri, admin panelde yönetilebiliyor.">
+      <created>1613062674401</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1613062674401</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +492,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Category tablosu eklendi, Admin Panel'de veriler listelendi." />
     <MESSAGE value="Category tablosuna admin panel üzerinden veri eklenip silinebilir." />
     <MESSAGE value="Category tablosunda bulunan veriler düzenlenebilir hale getirildi." />
     <MESSAGE value="Hotel tablosu eklendi. Admin panel üzerinden ekleme, silme, düzenleme&#10;yapılabilir hale getirildi. / Çalışmayan Add Category butonu düzeltildi." />
@@ -495,7 +516,8 @@
     <MESSAGE value="Üye rezervasyon yapabiliyor.&#10;User panelde bazı görsel hatalar mevcut.&#10;(Hotel detail sayfasındaki görsel hatalar giderildi.)" />
     <MESSAGE value="Rezervasyonlar admin panelde yönetilebilir hale getirildi." />
     <MESSAGE value="Kullanıcı rolleri eklendi." />
-    <option name="LAST_COMMIT_MESSAGE" value="Kullanıcı rolleri eklendi." />
+    <MESSAGE value="Kullanıcı rolleri, admin panelde yönetilebiliyor." />
+    <option name="LAST_COMMIT_MESSAGE" value="Kullanıcı rolleri, admin panelde yönetilebiliyor." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

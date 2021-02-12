@@ -1,7 +1,6 @@
 <!--footer section start-->
 <footer class="dashboard">
-    <p>&copy 2021 KBU Special Topics. All Rights Reserved | Design by <a href="https://twitter.com/brkygry" target="_blank"
-                                                                 class="text-primary">brkygry</a></p>
+    <p>Footer</p>
 </footer>
 <!--footer section end-->
 

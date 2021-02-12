@@ -136,6 +136,9 @@ class HomeController extends Controller
     public function gethotel(Request $request)
     {
         $data = Hotel::where('title', $request->input('search'))->first();
-        return redirect()->route('user_reservation_add', ['id'=>$data->id]);
+        $checkin = $request->input('checkin');
+        $checkout = $request->input('checkout');
+        $person = $request->input('person');
+        return redirect()->route('user_reservation_add');
     }
 }

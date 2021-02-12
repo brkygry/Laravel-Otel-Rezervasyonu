@@ -73,7 +73,7 @@
                                 <td>{{ $rs -> email }}</td>
                                 <td>{{ $rs -> status }}</td>
                                 <td><a href="{{route('admin_hotel_edit', ['id'=> $rs->id])}}"><img src="{{asset('assets/admin/images')}}/edit.png" height="25"></a></td>
-                                <td><a href="{{route('admin_image_add', ['hotel_id'=>$rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100, widht=1100 height=700')">
+                                <td><a href="{{route('admin_image_add', ['hotel_id'=>$rs->id])}}"onclick="return !window.open(this.href,'','top=50 left=100, widht=1100 height=700')">
                                         <img src="{{asset('assets/admin/images')}}/image-gallery.png" height="25"></a>
                                 </td>
                                 <td><a href="{{route('admin_hotel_delete', ['id'=> $rs->id])}}"onclick="return confirm('Are you sure? You want to delete this record')"><img src="{{asset('assets/admin/images')}}/delete.png" height="25"></a></td>

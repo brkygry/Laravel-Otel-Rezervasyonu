@@ -38,7 +38,7 @@ Route::get('/references', [HomeController::class, 'references'])->name('referenc
 Route::get('/blank', [HomeController::class, 'blank'])->name('blank');
 Route::get('hotel/{id}/{slug}', [HomeController::class, 'hotel'])->name('hotel');
 Route::get('booknow/{id}', [HomeController::class, 'booknow'])->whereNumber('id')->name('booknow');
-Route::post('/gethotel', [HomeController::class,'gethotel'])->name('gethotel');
+Route::get('/gethotel', [HomeController::class,'gethotel'])->name('gethotel');
 
 
 #User
@@ -47,12 +47,12 @@ Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
     #Reservation
     Route::prefix('reservation')->group(function (){
         Route::get('/',[ReservationController::class, 'index'])->name('user_reservations');
-        Route::get('/create/{id}',[ReservationController::class, 'create'])->name('user_reservation_add');
+        Route::post('/create',[ReservationController::class, 'create'])->name('user_reservation_add');
         Route::post('/store',[ReservationController::class, 'store'])->name('user_reservation_store');
         Route::get('/edit/{id}',[ReservationController::class, 'edit'])->name('user_reservation_edit');
         Route::post('/update/{id}',[ReservationController::class, 'update'])->name('user_reservation_update');
         Route::get('/delete/{id}',[ReservationController::class, 'destroy'])->name('user_reservation_delete');
-        Route::get('/show/{id}',[ReservationController::class, 'show'])->name('user_reservation_show');
+        Route::get('/show/{created_at}',[ReservationController::class, 'show'])->name('user_reservation_show');
     });
 });
 

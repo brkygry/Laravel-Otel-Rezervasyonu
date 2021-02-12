@@ -4,7 +4,8 @@
     @if(!empty($query))
         <datalist id="mylist">
             @foreach($datalist as $rs)
-                <option name="hotelid" value="{{$rs->title}}">{{$rs->category->title}}</option>
+                <option name="hotel_id" value="{{$rs->title}}">{{$rs->category->title}} </option>
+                <input type="text" id="searchText" value="{{$rs->id}}">
             @endforeach
         </datalist>
     @endif

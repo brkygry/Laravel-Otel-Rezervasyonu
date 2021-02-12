@@ -1,6 +1,6 @@
 <div class="row">
     <div id="availability">
-        <form action="{{route('gethotel')}}" method="post">
+        <form action="{{route('user_reservation_add')}}" method="post">
             @csrf
             @livewire('search')
         <div class="a-col alternate">
@@ -18,7 +18,7 @@
             <div class="a-col alternate">
                 <div class="input-field">
                     <label>Person</label>
-                    <input type="number" max="4" min="0" name="person" class="form-control" />
+                    <input type="number" max="4" min="0" name="person" width="48" height="48" class="form-control" />
                 </div>
             </div>
         <div class="a-col action">

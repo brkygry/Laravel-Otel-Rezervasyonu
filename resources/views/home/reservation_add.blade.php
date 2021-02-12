@@ -94,6 +94,7 @@
         <div id="fh5co-services-section">
             <div class="container">
                 <div class="row">
+                    @include('home.message')
                     <div class="col-md-6">
                         <form id="checkout-form" action="{{route("user_reservation_store")}}" class="clearfix" method="post">
                             @csrf
@@ -112,25 +113,14 @@
                                 </div>
                                 @endauth
                             </div>
-
+                            <br>
                             <div class="reservation-details">
                                 <h3 class="title">Reservation Details</h3>
                             </div>
                             <hr>
-                            <div class="a-col alternate">
-                                <div class="input-field">
-                                    <label for="date-start">Check In</label>
-                                    <input name="checkin" type="text" class="form-control" id="date-start" />
-                                </div>
-                            </div>
-                            <div class="a-col alternate">
-                                <div class="input-field">
-                                    <label for="date-end">Check Out</label>
-                                    <input name="checkout" type="text" class="form-control" id="date-end"/>
-                                </div>
-                            </div>
-
-
+                            <p>Check-In: {{$checkin}}</p>
+                            <p>Check-Out: {{$checkout}}</p>
+                            <p>{{$person}} Person</p>
                             <br>
 
                             <div class="payment-details">
@@ -150,34 +140,26 @@
                                 <input name="key" type="text" class="form-control" placeholder="CVC">
                             </div>
 
-                            <table>
-                                <tr>
-                                    <th name="total" class="empty" colspan="3"></th>
-                                    <th>TOTAL PRICE: </th>
-                                    <th name="total" colspan="2" class="total">${{$data->price}}</th>
-                                </tr>
-                            </table>
-
 
                             <br>
 
-                                <div class="input-checkbox">
-                                    <input type="hidden" name="total" value="{{$data->price}}">
-                                </div>
+                            <div class="input-checkbox">
+                                <input type="hidden" name="hotel_id" value="{{$data->id}}">
+                            </div>
 
-                                <div class="input-checkbox">
-                                    <input type="hidden" name="hotel_id" value="{{$data->id}}">
-                                </div>
+                            <div class="input-checkbox">
+                                <input type="hidden" name="person" value="{{$person}}">
+                            </div>
 
-                                <div class="input-checkbox">
-                                    <?php $randomNumber = rand(37,155);?>
-                                    <input type="hidden" name="room_id" value=" {{$randomNumber}}">
-                                </div>
+                            <div class="input-checkbox">
+                                <?php $randomNumber = rand(37,155);?>
+                                <input type="hidden" name="room_id" value=" {{$randomNumber}}">
+                            </div>
                             <?php
-                            $datetime1 = strtotime('May 3, 2012 10:38:22 GMT');
-                            $datetime2 = strtotime('06 Apr 2012 07:22:21 GMT');
+                            $datetime1 = strtotime($checkin);
+                            $datetime2 = strtotime($checkout);
 
-                            $secs = $datetime1 - $datetime2;// == <seconds between the two times>
+                            $secs = $datetime2 - $datetime1;// == <seconds between the two times>
                                 $day = $secs / 86400;
                                 $days = round ( $day , $precision = 0 , $mode = PHP_ROUND_HALF_UP );?>
 
@@ -185,6 +167,16 @@
                                     <input type="hidden" name="days" value="{{$days}}">
                                 </div>
 
+                            <div class="input-checkbox">
+                                <input type="hidden" name="total" value="{{$data->price * $person * $days}}">
+                            </div>
+                            <table>
+                                <tr>
+                                    <th name="total" class="empty" colspan="3"></th>
+                                    <th>TOTAL PRICE: </th>
+                                    <th name="total" colspan="2" class="total">${{$data->price * $person * $days}}</th>
+                                </tr>
+                            </table>
 
 
 
@@ -198,7 +190,7 @@
                         <h1>{{$data->title}}</h1>
                         <hr>
                         <h3>Açıklama</h3>
-                        {{$data->description}}
+                            {{$data->description}}
                         <br>
                         <br>
                         <h3>İletişim</h3>
@@ -206,7 +198,7 @@
                             <ul class="contact-info">
                                 <li><i class="ti-map"></i>{{$data->address}}</li>
                                 <li><i class="ti-mobile"></i>{{$data->phone}}</li>
-                                <li><i class="ti-envelope"></i><a href="#">{{$data->email}}</a></li>
+                                <li><i class="ti-envelope"></i><a href="#"></a>{{$data->email}}</li>
                             </ul>
                         </div>
                     </div>

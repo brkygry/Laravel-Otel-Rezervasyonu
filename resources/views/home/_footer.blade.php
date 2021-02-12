@@ -1,5 +1,6 @@
 @php
     $setting = \App\Http\Controllers\HomeController::getSetting();
+    $parentCategories = \App\Http\Controllers\HomeController::categoryList();
 @endphp
 <footer id="footer" class="fh5co-bg-color">
     <div class="container">
@@ -15,21 +16,9 @@
                     <div class="col-md-3">
                         <h3>Company</h3>
                         <ul class="link">
-                            <li><a href="{{route('contact')}}">About Us</a></li>
-                            <li><a href="#">Hotels</a></li>
-                            <li><a href="#">Customer Care</a></li>
+                            <li><a href="{{route('aboutus')}}">About Us</a></li>
+                            <li><a href="{{route('hotels')}}">Hotels</a></li>
                             <li><a href="{{route('contact')}}">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <h3>Our Facilities</h3>
-                        <ul class="link">
-                            <li><a href="#">Resturant</a></li>
-                            <li><a href="#">Bars</a></li>
-                            <li><a href="#">Pick-up</a></li>
-                            <li><a href="#">Swimming Pool</a></li>
-                            <li><a href="#">Spa</a></li>
-                            <li><a href="#">Gym</a></li>
                         </ul>
                     </div>
                     <div class="col-md-6">
