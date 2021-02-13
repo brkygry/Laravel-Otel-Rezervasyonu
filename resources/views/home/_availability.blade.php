@@ -2,7 +2,9 @@
     <div id="availability">
         <form action="{{route('user_reservation_add')}}" method="post">
             @csrf
+        <div class="a-col alternate">
             @livewire('search')
+        </div>
         <div class="a-col alternate">
             <div class="input-field">
                 <label for="date-start">Check In</label>

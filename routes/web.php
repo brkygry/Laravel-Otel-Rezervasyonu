@@ -124,6 +124,14 @@ Route::middleware('auth')->prefix('admin')->group(function (){
             Route::get('/show', [FaqController::class, 'show'])->name('admin_faq_show' );
         });
 
+        //Review
+        Route::prefix('review')->group(function () {
+            Route::get('/', [\App\Http\Controllers\Admin\ReviewController::class, 'index'])->name('admin_review');
+            Route::post('update/{id}', [\App\Http\Controllers\Admin\ReviewController::class, 'update'])->name('admin_review_update');
+            Route::get('delete/{id}', [\App\Http\Controllers\Admin\ReviewController::class, 'destroy'])->name('admin_review_delete');
+            Route::get('show/{id}', [\App\Http\Controllers\Admin\ReviewController::class, 'show'])->name('admin_review_show');
+        });
+
         #Admin Reservation
         Route::prefix('reservation')->group(function (){
             Route::get('/',[\App\Http\Controllers\Admin\ReservationController::class, 'index'])->name('admin_reservations');
@@ -157,17 +165,8 @@ Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(fu
 
     Route::get('/',[UserController::class, 'index'])->name('myprofile');
     Route::get('/mybookings',[ReservationController::class, 'index'])->name('mybookings');
-
-    #Hotel
-    Route::prefix('hotel')->group(function (){
-        Route::get('/',[\App\Http\Controllers\HotelController::class, 'index'])->name('user_hotels');
-        Route::get('/create',[\App\Http\Controllers\HotelController::class, 'create'])->name('user_hotel_add');
-        Route::post('/store',[\App\Http\Controllers\HotelController::class, 'store'])->name('user_hotel_store');
-        Route::get('/edit/{id}',[\App\Http\Controllers\HotelController::class, 'edit'])->name('user_hotel_edit');
-        Route::post('/update/{id}',[\App\Http\Controllers\HotelController::class, 'update'])->name('user_hotel_update');
-        Route::get('/delete/{id}',[\App\Http\Controllers\HotelController::class, 'destroy'])->name('user_hotel_delete');
-        Route::get('/show',[\App\Http\Controllers\HotelController::class, 'show'])->name('user_hotel_show');
-    });
+    Route::get('/myreviews',[UserController::class, 'myreviews'])->name('myreviews');
+    Route::get('/destroymyreviews/{id}', [UserController::class, 'destroymyreview'])->name('user_review_delete');
 });
 
 

@@ -59,7 +59,7 @@
                     <div
                         class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
                         <div class="fh5co-intro fh5co-table-cell">
-                            <h1 class="text-center">My Bookings</h1>
+                            <h1 class="text-center">My Reviews</h1>
                         </div>
                     </div>
                 </div>
@@ -85,17 +85,11 @@
                                                 <thead>
                                                 <tr>
                                                     <th>ID</th>
-                                                    <th>Name</th>
-                                                    <th>Email</th>
-                                                    <th>Phone</th>
                                                     <th>Hotel</th>
-                                                    <th>Check-in Date</th>
-                                                    <th>Check-out Date</th>
-                                                    <th>Reservation Time</th>
-                                                    <th>Admin Note</th>
-                                                    <th>Updated At</th>
+                                                    <th>Subject</th>
+                                                    <th>Review</th>
+                                                    <th>Created at</th>
                                                     <th>Status</th>
-                                                    <th>Total</th>
                                                     <th style="..." colspan="1">Actions</th>
                                                 </tr>
                                                 </thead>
@@ -103,23 +97,13 @@
                                                 @foreach($datalist as  $rs)
                                                     <tr>
                                                         <td>{{ $rs -> id }}</td>
-                                                        <td>{{ $rs -> name }}</td>
-                                                        <td>{{ $rs -> email }}</td>
-                                                        <td>{{ $rs -> phone }}</td>
                                                         <td>{{ $rs -> hotel -> title }}</td>
-                                                        <td>{{ $rs -> check_in }}</td>
-                                                        <td>{{ $rs -> check_out }}</td>
+                                                        <td>{{ $rs -> subject }}</td>
+                                                        <td>{{ $rs -> review }}</td>
                                                         <td>{{ $rs -> created_at }}</td>
-                                                        <td>{{ $rs -> note }}</td>
-                                                        <td>{{ $rs -> updated_at }}</td>
                                                         <td>{{ $rs -> status }}</td>
-                                                        <td>${{ $rs -> total }}</td>
                                                         <td>
-                                                            <a href="{{route('user_reservation_show', ['created_at'=> $rs->created_at])}}"
-                                                               onclick="return !window.open(this.href,'','top=50 left=100, widht=600 height=600')">
-                                                                <img src="{{asset('assets/admin/images')}}/view.png"
-                                                                     height="25">
-                                                            </a>
+                                                            <a href="{{route('admin_review_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete! Are you sure?')"><img src="{{asset('assets/admin/images')}}/delete.png" style="height: 30px"></a>
                                                         </td>
                                                     </tr>
                                                 @endforeach

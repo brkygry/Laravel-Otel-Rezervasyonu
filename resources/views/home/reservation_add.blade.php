@@ -142,9 +142,15 @@
 
 
                             <br>
-
                             <div class="input-checkbox">
                                 <input type="hidden" name="hotel_id" value="{{$data->id}}">
+                            </div>
+                            <div class="input-checkbox">
+                                <input type="hidden" name="checkin" value="{{$checkin}}">
+                            </div>
+
+                            <div class="input-checkbox">
+                                <input type="hidden" name="checkout" value="{{$checkout}}">
                             </div>
 
                             <div class="input-checkbox">

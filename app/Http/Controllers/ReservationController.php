@@ -92,7 +92,8 @@ class ReservationController extends Controller
     public function show(Room $room, $created_at)
     {
         $datalist = Room::where('created_at', $created_at)->get();
-        return view('home.user_reservation_detail', ['datalist'=>$datalist]);
+        $data = Reservation::where('created_at', $created_at)->get();
+        return view('home.user_reservation_detail', ['datalist'=>$datalist, 'data'=>$data]);
     }
 
     /**

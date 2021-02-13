@@ -3,6 +3,7 @@
     <h8 class="aside-title">User Panel</h8>
          <li><a href="{{route('myprofile')}}">Profile</a></li>
          <li><a href="{{route('mybookings')}}">Bookings</a></li>
+        <li><a href="{{route('myreviews')}}">Reviews</a></li>
          @php
             $userRoles = Auth::user()->roles->pluck('name');
          @endphp

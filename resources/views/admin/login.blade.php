@@ -67,10 +67,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <button type="submit" class="btn btn-primary error-w3l-btn mt-sm-5 mt-3 px-4">Login</button>
             </form>
             <p class="paragraph-agileits-w3layouts mt-4">Don't have an account
-                <a href="register.html">Create an account</a>
+                <a href="/register">Create an account</a>
             </p>
             <h1 class="paragraph-agileits-w3layouts mt-2">
-                <a href="index.html">Back to Home</a>
+                <a href="/">Back to Home</a>
             </h1>
         </div>
 

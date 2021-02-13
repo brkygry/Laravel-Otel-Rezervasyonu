@@ -9,9 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 class Hotel extends Model
 {
     use HasFactory;
-    protected $appends = [
-        'parent',
-    ];
 
     #One to Many (Inverse) / Belong to
     public function category(){
@@ -19,7 +16,7 @@ class Hotel extends Model
     }
 
     #One to Many
-    public function reviews(){
+    public function review(){
         return $this->hasMany(Review::class);
     }
 

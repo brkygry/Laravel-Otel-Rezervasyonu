@@ -140,6 +140,14 @@
                             <p>{!! $data->detail !!}</p>
                         </div>
                     </div>
+                    <div class="col-md-12">
+                        <h3>Review</h3>
+                        <hr>
+                        <div>
+                            @livewire('review' , ['id' => $data->id])
+                        </div>
+                        @livewireScripts
+                    </div>
                 </div>
             </div>
         </div>

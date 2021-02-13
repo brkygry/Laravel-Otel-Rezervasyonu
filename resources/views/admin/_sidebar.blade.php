@@ -40,6 +40,7 @@
                     </ul>
                 </li>
                 <li><a href="{{route('admin_users')}}"><i class="fa fa-users"></i> <span>Users</span></a></li>
+                <li><a href="{{route('admin_review')}}"><i class="fa fa-comment"></i> <span>Review</span></a></li>
                 <li><a href="{{route('admin_setting')}}"><i class="fa fa-wrench"></i> <span>Settings</span></a></li>
                 <li><a href="{{route('admin_message')}}"><i class="fa fa-envelope-o"></i> <span>Contact</span></a></li>
                 <li><a href="{{route('admin_faq')}}"><i class="fa fa-question"></i> <span>FAQ</span></a></li>

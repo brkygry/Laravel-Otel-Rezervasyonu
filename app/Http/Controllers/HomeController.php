@@ -35,13 +35,7 @@ class HomeController extends Controller
             'slider'=>$slider,
             'page'=>'home'
         ];
-        $availability = Hotel::select('id', 'title', 'image', 'price', 'description', 'slug')->get();
-        $adata=[
-            'setting'=>$setting,
-            'availability'=>$availability,
-            'page'=>'home'
-        ];
-        return view('home.index', ['setting'=>$setting], $data, $adata);
+        return view('home.index', ['setting'=>$setting], $data);
     }
 
     public function comments($id){

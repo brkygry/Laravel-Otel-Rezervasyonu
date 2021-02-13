@@ -36,7 +36,7 @@
                             <tr>
                                 <th>Room ID</th>
                                 <th>Image</th>
-                                <th>Price</th>
+                                <th>Total Price</th>
                                 <th>Person</th>
                                 <th>Status</th>
                             </tr>
